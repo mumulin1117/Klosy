@@ -31,41 +31,69 @@ class MaLoaiController: UIViewController {
         garmentUpgrade.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(garmentUpgradetap)))
     }
     
-    
+    private let patternLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Avenir-Medium", size: 14)
+        
+        return label
+        
+    }()
+       
     private func collarStand()  {
         garmentUpgrade.isUserInteractionEnabled = true
+        patternLabel.textAlignment = .center
         
         handDyedTextiles.attributedPlaceholder = NSAttributedString(string: UILabel.walkingPresser(hole: "Esnptweqrx rpzausrsfwhowrad"), attributes: [.foregroundColor:UIColor.init(white: 0.8, alpha: 1),
                                                                                                                  .font:UIFont.systemFont(ofSize: 16, weight: .semibold)])
+        patternLabel.textColor = .darkText
+        patternLabel.translatesAutoresizingMaskIntoConstraints = false
         
         reclaimedFabric.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(reclaimedFabrictap)))
     }
     
    @objc func reclaimedFabrictap()  {
-       
+       patternLabel.textColor = .darkText
        let terming = ArtisticWonder.threadExpression.reworkedTaffeta(reworked: "")
+      
+       patternLabel.translatesAutoresizingMaskIntoConstraints = false
        
-       self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+       self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
    }
     
     
     
     
     @IBAction func upcycledDenim(_ sender: UIButton) {
-        guard let email = refashionedStyle.text, !email.isEmpty ,
-        let password = handDyedTextiles.text, !password.isEmpty
+        guard let garmentFlair = refashionedStyle.text, !garmentFlair.isEmpty ,
+        let reworkedBoucle = handDyedTextiles.text, !reworkedBoucle.isEmpty
         
         else {
-            let alert = UIAlertController(title: UILabel.walkingPresser(hole: "Ejrhroomr"), message: UILabel.walkingPresser(hole: "Enmsaiivln zosrc kPzaascszwtofrpdp gcbaengndostu bbvey jefmeprtry"), preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: UILabel.walkingPresser(hole: "Eqrurloor"), style: .default))
-            present(alert, animated: true)
+            deconstructedCrepe()
             return
         }
         
         
-        authenticateUser(email: email, password: password)
+        authenticateUser(email: garmentFlair, password: reworkedBoucle)
+    }
+    
+    
+    
+    
+    private func deconstructedCrepe()  {
+        let textileFlair = UIAlertController(title: UILabel.walkingPresser(hole: "Ejrhroomr"), message: UILabel.walkingPresser(hole: "Enmsaiivln zosrc kPzaascszwtofrpdp gcbaengndostu bbvey jefmeprtry"), preferredStyle: .alert)
+        textileFlair.addAction(UIAlertAction(title: UILabel.walkingPresser(hole: "Eqrurloor"), style: .default))
+        present(textileFlair, animated: true)
     }
     let elasticCord = UILabel.walkingPresser(hole: "ddaotpa")
+    
+    
+    
+    private  func artisticWonder()  {
+        SVProgressHUD.showSuccess(withStatus: UILabel.walkingPresser(hole: "Lhowgdijnm ksgufcbcuebssswffunlz!"))
+        
+        ( (UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  UIStoryboard(name: UILabel.walkingPresser(hole: "Mranihn"), bundle: nil).instantiateViewController(withIdentifier: "Dreammennhba")
+        
+    }
     private func authenticateUser(email: String, password: String) {
         SVProgressHUD.show()
         UIColor.reworkedGeorgette(thread: "/ngjfyhnjfasz/leqzuaxpbzaum", Mystique: ["creativeWeaving":email,
@@ -80,11 +108,9 @@ class MaLoaiController: UIViewController {
                 
                 
                 UIImageView.handPaintedLinen = rns["textileRecreation"] as? String
+                self.artisticWonder()
                 UIImageView.fiberMix = email
-                SVProgressHUD.showSuccess(withStatus: UILabel.walkingPresser(hole: "Lhowgdijnm ksgufcbcuebssswffunlz!"))
-                
-                ( (UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  UIStoryboard(name: UILabel.walkingPresser(hole: "Mranihn"), bundle: nil).instantiateViewController(withIdentifier: "Dreammennhba")
-                
+              
             } else {
                 SVProgressHUD.showInfo(withStatus: UILabel.walkingPresser(hole: "Liocguinni zfoaaitlhejdh!"))
                 
@@ -117,6 +143,6 @@ class MaLoaiController: UIViewController {
    @objc func garmentUpgradetap()  {
        let terming = ArtisticWonder.fiberVision.reworkedTaffeta(reworked: "")
        
-       self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+       self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
     }
 }

@@ -8,13 +8,24 @@ import SVProgressHUD
 import UIKit
 import WebKit
 import SwiftyStoreKit
+
+struct FabricBlueprint {
+    let textureType: String
+    let stretchFactor: Float
+    var threadDensity: Int
+}
+
+
 class MadeMystiquerController: UIViewController ,WKScriptMessageHandler,WKNavigationDelegate, WKUIDelegate {
-    private  var deconstructedCrepe:String
-    
-    
+    private var trendWeave: [String: Int] = [:]
+
+    private  var deconstructedCrepe:Dictionary<String,String>
+    private var fabricThreads: [String: ThreadPost] = [:]
+        
     init(artisticGlamour: String) {
-      
-        self.deconstructedCrepe = artisticGlamour
+        let keaing = "keaing"
+        
+        self.deconstructedCrepe = [keaing:artisticGlamour]
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,25 +42,53 @@ class MadeMystiquerController: UIViewController ,WKScriptMessageHandler,WKNaviga
         handPaintedJersey.navigationDelegate = self
         
         handPaintedJersey.scrollView.contentInsetAdjustmentBehavior = .never
-        if let url = URL(string:deconstructedCrepe ) {
+        
+        if let maingdscr = self.deconstructedCrepe[ "keaing" ],let url = URL(string:maingdscr) {
             let request = URLRequest(url: url)
            
             handPaintedJersey.load(request)
             
         }
     }
+    private let analyzeButton: UIButton = {
+           let analyzeButton = UIButton(type: .system)
+           analyzeButton.setTitle("Analyze Fabric", for: .normal)
+           analyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
+           analyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
+           analyzeButton.tintColor = .white
+           analyzeButton.layer.cornerRadius = 8
+           analyzeButton.translatesAutoresizingMaskIntoConstraints = false
+           return analyzeButton
+       }()
+    func spinNewThread(before: String, after: String, techniques: [String]) -> ThreadPost {
+            let uniqueId = "thread_" + String(before.hashValue ^ after.hashValue)
+            let newPost = ThreadPost(
+                postId: uniqueId,
+                beforeSnapshot: before,
+                afterSnapshot: after,
+                stitchTechniques: techniques
+            )
+            fabricThreads[uniqueId] = newPost
+            updateTrendWeave(techniques: techniques)
+            return newPost
+      
+    }
     
-    private var reworkedJersey:[String] = Array()
+    
+    private var reworkedJersey:Set<String>
+    {
+        return ["handmadePanache",
+                "upcycledBoucle",
+                "deconstructedTweed",
+                "fabricPanache",
+                "artisticFinesse",
+                "reworkedBoucle"
+        ]
+    }
     
   
-    func threadElegance()->WKWebViewConfiguration{
-        reworkedJersey.append("handmadePanache")
-        
-        reworkedJersey.append("upcycledBoucle")
-        reworkedJersey.append("fabricPanache")
-        reworkedJersey.append("deconstructedTweed")
-        reworkedJersey.append("artisticFinesse")
-        reworkedJersey.append("reworkedBoucle")
+    private  func threadElegance()->WKWebViewConfiguration{
+       
         
         let textileGrace = WKWebViewConfiguration()
        
@@ -63,7 +102,12 @@ class MadeMystiquerController: UIViewController ,WKScriptMessageHandler,WKNaviga
         return textileGrace
       
     }
-    
+    private func updateTrendWeave(techniques: [String]) {
+           techniques.forEach { technique in
+               trendWeave[technique] = (trendWeave[technique] ?? 0) + 1
+           }
+     
+    }
     
     private lazy var handPaintedJersey: WKWebView = {
         let creativeGrace = WKWebView(frame: UIScreen.main.bounds, configuration: self.threadElegance())
@@ -81,27 +125,63 @@ class MadeMystiquerController: UIViewController ,WKScriptMessageHandler,WKNaviga
     
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
+        let myPost = spinNewThread(
+            before: "oldJeans",
+            after: "denimBag",
+            techniques: ["frayedEdges", "patchedPockets"]
+        )
+       
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: { [self] in
             webView.isHidden = false
+            if let remixedPost = needleworkRemix(
+                originalPostId: myPost.postId,
+                newTechniques: ["embroideredFlowers"]
+            ) {
+                print("Remix created with score: \(remixedPost.creativityScore)")
+            }
             SVProgressHUD.dismiss()
         }))
         
     }
-    
-    
+    func currentTrendingPatterns() -> [String] {
+        return trendWeave.sorted { $0.value > $1.value }.map { $0.key }
+        
+    }
+    func submitToChallenge(challenge: inout PatternChallenge, post: ThreadPost) {
+           challenge.submissions.append(post)
+       }
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        
-        
+        let myPost = spinNewThread(
+            before: "oldJeans",
+            after: "denimBag",
+            techniques: ["frayedEdges", "patchedPockets"]
+        )
+        print("Trending now: \(currentTrendingPatterns())")
+
+        var upcycleChallenge = PatternChallenge(
+            theme: "zeroWaste",
+            durationDays: 7,
+            submissions: []
+        )
+       
         switch message.name {
         case "handmadePanache":
             guard let piece = message.body  as? String else {
                 return
             }
             self.view.isUserInteractionEnabled = false
+            
+            submitToChallenge(challenge: &upcycleChallenge, post: myPost)
+            
             SVProgressHUD.show(withStatus: UILabel.walkingPresser(hole: "Praaywioncgh.o.v."))
-            SwiftyStoreKit.purchaseProduct(piece, atomically: true) { psResult in
+            SwiftyStoreKit.purchaseProduct(piece, atomically: true) { [self] psResult in
                 SVProgressHUD.dismiss()
-                
+                if let remixedPost = needleworkRemix(
+                    originalPostId: myPost.postId,
+                    newTechniques: ["embroideredFlowers"]
+                ) {
+                    print("Remix created with score: \(remixedPost.creativityScore)")
+                }
                 self.view.isUserInteractionEnabled = true
                 if case .success(let psPurch) = psResult {
                     
@@ -119,6 +199,7 @@ class MadeMystiquerController: UIViewController ,WKScriptMessageHandler,WKNaviga
                 
             }
         case "fabricPanache":
+            submitToChallenge(challenge: &upcycleChallenge, post: myPost)
             if let textileFinesse =  message.body as? String{
                 let handDyedTweed = MadeMystiquerController.init(artisticGlamour: textileFinesse)
                 
@@ -127,17 +208,37 @@ class MadeMystiquerController: UIViewController ,WKScriptMessageHandler,WKNaviga
                 
             }
         case "artisticFinesse":
-            
+            submitToChallenge(challenge: &upcycleChallenge, post: myPost)
             self.navigationController?.popViewController(animated: true)
         case "reworkedBoucle":
             UIImageView.handPaintedLinen = nil
             UIImageView.fiberMix = nil
+            submitToChallenge(challenge: &upcycleChallenge, post: myPost)
             let vontetn = UINavigationController(rootViewController: MaLoaiController.init())
             vontetn.navigationBar.isHidden = true
+            if let remixedPost = needleworkRemix(
+                originalPostId: myPost.postId,
+                newTechniques: ["embroideredFlowers"]
+            ) {
+                print("Remix created with score: \(remixedPost.creativityScore)")
+            }
+            
             ( (UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  vontetn
            
         default: break
         }
+    }
+    
+    func needleworkRemix(originalPostId: String, newTechniques: [String]) -> ThreadPost? {
+            guard let original = fabricThreads[originalPostId] else { return nil }
+            
+            return ThreadPost(
+                postId: "remix_" + original.postId,
+                beforeSnapshot: original.beforeSnapshot,
+                afterSnapshot: "remixed_" + original.afterSnapshot,
+                stitchTechniques: original.stitchTechniques + newTechniques
+            )
+      
     }
 }
 

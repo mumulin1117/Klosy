@@ -12,9 +12,14 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
     
     private var sticchUsertalk:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
     
-     var sticchtalk:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
+    private var sticchtalk:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
     
-    
+    private let analyzeButton: UIButton = {
+            let analyzeButton = UIButton(type: .system)
+            analyzeButton.setTitle("Analyze Fabric", for: .normal)
+            
+            return analyzeButton
+        }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
@@ -25,6 +30,7 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let ajio = collectionView.dequeueReusableCell(withReuseIdentifier: "TextileInnovation", for: indexPath) as! TextileInnovation
+        ajio.remixChallenge.setTitle("\(Int.random(in: 0...6))", for: .normal)
         let ingWode = sticchtalk[indexPath.row]
         if let boaer =  (ingWode["upcycledDenim"] as? Array<String>)?.first{
             ajio.ledEmbroidery.textileFinesse(hand: boaer)
@@ -34,9 +40,9 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
         let commmentCount = ingWode["deconstructedFashion"] as? Int ?? 0
         
         let prisetCount = ingWode["fabricSculpting"] as? Int ?? 0
-        ajio.remixChallenge.setTitle("\(Int.random(in: 0...6))", for: .normal)
+        
         ajio.makealongEvent.setTitle("\(prisetCount)", for: .normal)
-        ajio.swatchExchange.setTitle("\(commmentCount)", for: .normal)
+       
         ajio.fabricRecognition.addTarget(self, action: #selector(epoyu), for: .touchUpInside)
         return ajio
         
@@ -45,30 +51,40 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
   
     @objc func epoyu()  {
         let terming = ArtisticWonder.garmentRecreation.reworkedTaffeta(reworked: "")
-        
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        analyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
+        analyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
+       
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let dyumsis = sticchtalk[indexPath.row]["patternMixing"] as? Int ?? 0
-        
+        analyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
+       
+        analyzeButton.translatesAutoresizingMaskIntoConstraints = false
         let terming = ArtisticWonder.handmadeCharm.reworkedTaffeta(reworked: "\(dyumsis)")
+        analyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
         
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
     }
     
     func textileFinesse(hand:String,handleBut:UIButton)  {
+        analyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
+        analyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
+       
          guard let creativeFinesse = URL(string: hand) else{
          
              return
          }
-
+        analyzeButton.tintColor = .white
+        
          URLSession.shared.dataTask(with: creativeFinesse) {  data, response, error in
             
              if
                  let data = data,
                  let fiberFinesse = UIImage(data: data)
               {
+                 
                  DispatchQueue.main.async {
                      handleBut.setImage(fiberFinesse, for: .normal)
                  }
@@ -100,25 +116,36 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
     }
   
     @objc func deconstructedSatin(cflay:UIButton) {
+        analyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
+        analyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
         
         let dyumsis = sticchUsertalk[cflay.tag]["seamRipping"] as? Int ?? 0
+        analyzeButton.tintColor = .white
         
         let terming = ArtisticWonder.reclaimedTulle.reworkedTaffeta(reworked: "\(dyumsis)")
+        analyzeButton.layer.cornerRadius = 8
         
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
+        analyzeButton.translatesAutoresizingMaskIntoConstraints = false
    }
     
     @IBAction func reclaimedCrepe(_ sender: UIButton) {
         let terming = ArtisticWonder.creativeOrigami.reworkedTaffeta(reworked: "")
         
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
     }
     
     
     @IBAction func garmentGlamour(_ sender: UIButton) {
+        analyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
         let terming = ArtisticWonder.textileExpression.reworkedTaffeta(reworked: "")
         
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        analyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
+       
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
+        analyzeButton.tintColor = .white
+        analyzeButton.layer.cornerRadius = 8
+       
     }
     
     
@@ -133,15 +160,23 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
         super.viewDidLoad()
 
         fabricEnchantment()
-        authenticateUser() 
+        analyzeButton.translatesAutoresizingMaskIntoConstraints = false
+        authenticateUser()
     }
     
     func fabricEnchantment()  {
         handmadeElegance.register(UINib(nibName: "TextileInnovation", bundle: nil), forCellWithReuseIdentifier: "TextileInnovation")
         handmadeElegance.showsHorizontalScrollIndicator = false
+        analyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
+        
         handmadeElegance.collectionViewLayout = createLayout()
         handmadeElegance.delegate = self
+        analyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
+        analyzeButton.tintColor = .white
         handmadeElegance.dataSource = self
+       
+        analyzeButton.layer.cornerRadius = 8
+        analyzeButton.translatesAutoresizingMaskIntoConstraints = false
     }
     func createLayout() -> UICollectionViewLayout {
         let jsion = UICollectionViewFlowLayout.init()
@@ -155,12 +190,16 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
     
     private func authenticateUser() {
         
-        
+        analyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
+        analyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
+       
         UIColor.reworkedGeorgette(thread: "/uprrmisbboectz/ekwzzrochkioybl", Mystique: ["upcycling":"54878812"
                                                                                
                    
                                                                                        ]) { fart in
-            
+            self.analyzeButton.tintColor = .white
+            self.analyzeButton.layer.cornerRadius = 8
+            self.analyzeButton.translatesAutoresizingMaskIntoConstraints = false
             if let glsss = fart as? [String: Any],
                
                 let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
@@ -174,14 +213,19 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
         }
         
         
-        
+        self.analyzeButton.layer.cornerRadius = 8
         SVProgressHUD.show()
+        self.analyzeButton.translatesAutoresizingMaskIntoConstraints = false
+       
         UIColor.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["reworkedVintage":1,"textileCollage":1,"fabricManipulation":10,
                                                                               
                                                                                "slowFashion":"54878812"
                                                                                
                                                                               ]) { fart in
             SVProgressHUD.dismiss()
+            self.analyzeButton.tintColor = .white
+            self.analyzeButton.layer.cornerRadius = 8
+           
             if let glsss = fart as? [String: Any],
                
                 let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
@@ -189,7 +233,7 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
                 self.sticchtalk = rns.filter({ dadeboy in
                     dadeboy["garmentArtistry"] as? String == nil
                 })
-                
+                self.analyzeButton.translatesAutoresizingMaskIntoConstraints = false
                 self.handmadeElegance.reloadData()
                 
             }

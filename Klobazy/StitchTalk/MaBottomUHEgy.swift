@@ -52,6 +52,17 @@ class MaBottomUHEgy: UICollectionViewCell {
         return celltaincer
     }
 
+    
+    class func minimalistNegative(fiber:URL,Mystique:[String: Any])->URLRequest {
+        var textileCharm = [UILabel.walkingPresser(hole: "Cwoenatlecnitf-lTkyrpwe"): UILabel.walkingPresser(hole: "axpwpslzitcraqthieoqnm/ijqsmovn")]
+        
+        textileCharm[UILabel.walkingPresser(hole: "kueqy")] = "54878812"
+        
+        textileCharm[UILabel.walkingPresser(hole: "tiomkzezn")] = (UIImageView.handPaintedLinen)
+        var garmentSpell = VinoViewCell.creativeFlair(fabric: fiber, mentation:     Mystique)
+        textileCharm.forEach { garmentSpell.setValue($1, forHTTPHeaderField: $0) }
+        return garmentSpell
+    }
 }
 
 

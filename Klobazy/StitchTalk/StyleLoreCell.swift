@@ -8,7 +8,15 @@
 import UIKit
 
 class StyleLoreCell: UICollectionViewCell {
-
+    private let materialPreview: UIImageView = {
+            let iv = UIImageView()
+            iv.contentMode = .scaleAspectFit
+            iv.layer.borderWidth = 2
+            iv.layer.borderColor = UIColor.systemTeal.cgColor
+            iv.translatesAutoresizingMaskIntoConstraints = false
+            return iv
+       
+    }()
     @IBOutlet weak var fiberCraft: UIImageView!
     
     @IBOutlet weak var artisticStitching: UIButton!

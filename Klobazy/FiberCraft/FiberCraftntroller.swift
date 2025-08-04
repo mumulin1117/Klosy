@@ -9,14 +9,23 @@ import UIKit
 import SVProgressHUD
 
 class FiberCraftntroller: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSource{
-    var sticchtalk:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
-   
+    private var sticchtalk:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
+    private let materialPreview: UIImageView = {
+        let material = UIImageView()
+        material.contentMode = .scaleAspectFit
+       
+        return material
+        
+    }()
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        materialPreview.layer.borderWidth = 2
         let dyumsis = sticchtalk[indexPath.row]["patternMixing"] as? Int ?? 0
         
+        materialPreview.layer.borderColor = UIColor.systemTeal.cgColor
+      
         let terming = ArtisticWonder.handDyedLinen.reworkedTaffeta(reworked: "\(dyumsis)")
-        
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        materialPreview.translatesAutoresizingMaskIntoConstraints = false
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -54,17 +63,24 @@ class FiberCraftntroller: UIViewController ,UICollectionViewDelegate,UICollectio
    
   
     @objc func deconstructedSatin() {
+        materialPreview.layer.borderWidth = 2
         let terming = ArtisticWonder.garmentRecreation.reworkedTaffeta(reworked: "")
         
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        materialPreview.layer.borderColor = UIColor.systemTeal.cgColor
+       
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
+        materialPreview.translatesAutoresizingMaskIntoConstraints = false
    
    }
 
     
     @IBAction func garmentGlamour(_ sender: UIButton) {
         let terming = ArtisticWonder.fiberPlay.reworkedTaffeta(reworked: "")
-        
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        materialPreview.layer.borderWidth = 2
+      
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
+        materialPreview.layer.borderColor = UIColor.systemTeal.cgColor
+        materialPreview.translatesAutoresizingMaskIntoConstraints = false
     }
     
    
@@ -75,15 +91,21 @@ class FiberCraftntroller: UIViewController ,UICollectionViewDelegate,UICollectio
     override func viewDidLoad() {
         super.viewDidLoad()
         handmadeElegance.delegate = self
+        
+        materialPreview.translatesAutoresizingMaskIntoConstraints = false
         fabricEnchantment()
+        materialPreview.layer.borderWidth = 2
         
     }
     let elasticCord = UILabel.walkingPresser(hole: "ddaotpa")
     func fabricEnchantment()  {
+        materialPreview.layer.borderWidth = 2
+        
         handmadeElegance.register(UINib(nibName: "FiberCrafCell", bundle: nil), forCellWithReuseIdentifier: "FiberCrafCell")
         handmadeElegance.showsHorizontalScrollIndicator = false
         
-        
+     
+        materialPreview.translatesAutoresizingMaskIntoConstraints = false
         handmadeElegance.dataSource = self
         SVProgressHUD.show()
         UIColor.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["reworkedVintage":1,"textileCollage":1,"fabricManipulation":10,
@@ -99,12 +121,14 @@ class FiberCraftntroller: UIViewController ,UICollectionViewDelegate,UICollectio
                 self.sticchtalk = rns.filter({ dadeboy in
                     dadeboy["garmentArtistry"] as? String != nil
                 })
+                self.materialPreview.layer.borderColor = UIColor.systemTeal.cgColor
                 
                 self.handmadeElegance.reloadData()
                 
             }
             
         } Spell: { errrr in
+            self.materialPreview.layer.borderColor = UIColor.systemTeal.cgColor
             SVProgressHUD.dismiss()
         }
         
@@ -112,6 +136,7 @@ class FiberCraftntroller: UIViewController ,UICollectionViewDelegate,UICollectio
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         handmadeElegance.collectionViewLayout = createLayout()
     }
     func createLayout() -> UICollectionViewLayout {

@@ -7,28 +7,61 @@
 
 import UIKit
 import SVProgressHUD
-
+struct PatternChallenge {
+       let theme: String
+       let durationDays: Int
+       var submissions: [ThreadPost]
+   }
 class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout, MaBottomUHEgydelegate, ThriftFlipViewdelegate{
     func dareplaure() {
+        beforeImageView.contentMode = .scaleAspectFit
+       
         let terming = ArtisticWonder.garmentRecreation.reworkedTaffeta(reworked: "")
-        
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        beforeImageView.clipsToBounds = true
+       
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
+        beforeImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    
+    private let techniquesLabel: UILabel = {
+           
+        let techniqu = UILabel()
+        
+        techniqu.translatesAutoresizingMaskIntoConstraints = false
+        return techniqu
+       
+    }()
     func cuffBarrelKnowedge(di: Int) {
         //知识
+        beforeImageView.contentMode = .scaleAspectFit
+       
         let terming = ArtisticWonder.garmentSpell.reworkedTaffeta(reworked: "\(di)")
-        
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
-        
+        beforeImageView.clipsToBounds = true
+      
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
+        beforeImageView.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    private let beforeImageView: UIImageView = {
+        let beforeImage = UIImageView()
+      
+        beforeImage.layer.cornerRadius = 8
+       
+        return beforeImage
+        
+    }()
+    
     
     func cuffBarrel(di: Int) {
         
+        techniquesLabel.font = UIFont(name: "Avenir-Medium", size: 14)
         
         let terming = ArtisticWonder.textileCharm.reworkedTaffeta(reworked: "\(di)")
-        
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+        techniquesLabel.textColor = .systemGray
+      
+        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
+        techniquesLabel.numberOfLines = 0
     }
     
     var recorireusehead:ThriftFlipView?
@@ -75,7 +108,7 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
    @objc func asTAlk()  {
         let terming = ArtisticWonder.reclaimedGeorgette.reworkedTaffeta(reworked: "")
         
-        self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming), animated: true)
+       self.navigationController?.pushViewController(MadeMystiquerController.init(artisticGlamour: terming.0), animated: true)
     }
   
     @IBOutlet weak var fiberGlamour: UICollectionView!
@@ -85,10 +118,11 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
     
     func photographicPrint()  {
         fiberGlamour.dataSource = self
+        beforeImageView.contentMode = .scaleAspectFit
+        
         fiberGlamour.register(UINib.init(nibName: "ThriftFlipView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ThriftFlipView")
-        
-        
-        
+        beforeImageView.clipsToBounds = true
+       
         fiberGlamour.register(MaBottomUHEgy.self, forCellWithReuseIdentifier: "MaBottomUHEgy")
     }
     override func viewDidLoad() {
@@ -118,22 +152,30 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
     
     private func authenticateUser() {
         SVProgressHUD.show()
+        beforeImageView.translatesAutoresizingMaskIntoConstraints = false
+        let texfio = UITextField.init()
+        texfio.layer.cornerRadius = 1
+        
         UIColor.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["textileCollage":1,"fabricManipulation":10,
                                                                                "wearableArt":2,
                                                                                         "reworkedVintage":5,
                                                                                         "slowFashion":"54878812"
                                                                                        
                                                                                        ]) { fart in
+            texfio.text = "Enter nowing...."
+            texfio.placeholder = "entwr"
             SVProgressHUD.dismiss()
-            if let glsss = fart as? [String: Any],
+            if let glsss = fart as? [String: Any],texfio.text?.count ?? 0 > 0,
                               
                 let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
-               
+                texfio.textColor = .white
                 self.recorireusehead?.sticchtalk = rns
+                texfio.borderStyle = .bezel
                 self.recorireusehead?.shareingUserView.reloadData()
             }
             
         } Spell: { errrr in
+            texfio.textColor = .white
             SVProgressHUD.dismiss()
         }
         
@@ -144,12 +186,14 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
                                                                                        
                                                                                        ]) { fart in
             
-            if let glsss = fart as? [String: Any],
+            texfio.text = "Enter nowing...."
+            texfio.placeholder = "entwr"
+            if let glsss = fart as? [String: Any],texfio.text?.count ?? 0 > 0,
                               
                 let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
-                
+                texfio.borderStyle = .bezel
                 self.knowedgealk = rns
-             
+                texfio.textColor = .white
                 self.fiberGlamour.reloadData()
             }
             
