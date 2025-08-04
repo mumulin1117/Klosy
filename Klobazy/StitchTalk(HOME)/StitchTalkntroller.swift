@@ -81,20 +81,27 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var fiberGlamour: UICollectionView!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fiberGlamour.collectionViewLayout = createLayout()
-        fiberGlamour.showsHorizontalScrollIndicator = false
+    
+    
+    func photographicPrint()  {
+        fiberGlamour.dataSource = self
         fiberGlamour.register(UINib.init(nibName: "ThriftFlipView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ThriftFlipView")
         
         
         
         fiberGlamour.register(MaBottomUHEgy.self, forCellWithReuseIdentifier: "MaBottomUHEgy")
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        photographicPrint() 
+        fiberGlamour.collectionViewLayout = createLayout()
+        fiberGlamour.showsHorizontalScrollIndicator = false
+        
 
         fiberGlamour.showsHorizontalScrollIndicator = false
         
         fiberGlamour.delegate = self
-        fiberGlamour.dataSource = self
+        
         authenticateUser()
     }
     
@@ -107,11 +114,11 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
         return jsion
     }
 
-    
+    let elasticCord = UILabel.walkingPresser(hole: "ddaotpa")
     
     private func authenticateUser() {
         SVProgressHUD.show()
-        UIImageView.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["textileCollage":1,"fabricManipulation":10,
+        UIColor.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["textileCollage":1,"fabricManipulation":10,
                                                                                "wearableArt":2,
                                                                                         "reworkedVintage":5,
                                                                                         "slowFashion":"54878812"
@@ -120,7 +127,7 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
             SVProgressHUD.dismiss()
             if let glsss = fart as? [String: Any],
                               
-                let rns = glsss["data"] as? Array<[String: Any]>  {
+                let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
                
                 self.recorireusehead?.sticchtalk = rns
                 self.recorireusehead?.shareingUserView.reloadData()
@@ -131,7 +138,7 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
         }
         
         
-        UIImageView.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["textileCollage":1,"fabricManipulation":10,
+        UIColor.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["textileCollage":1,"fabricManipulation":10,
                                                                                         "reworkedVintage":4,
                                                                                         "slowFashion":"54878812"
                                                                                        
@@ -139,7 +146,7 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
             
             if let glsss = fart as? [String: Any],
                               
-                let rns = glsss["data"] as? Array<[String: Any]>  {
+                let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
                 
                 self.knowedgealk = rns
              

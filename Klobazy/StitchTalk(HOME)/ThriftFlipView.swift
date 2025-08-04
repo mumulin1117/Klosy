@@ -52,11 +52,16 @@ class ThriftFlipView: UICollectionReusableView, UICollectionViewDelegate, UIColl
     override func awakeFromNib() {
         super.awakeFromNib()
         shareingUserView.collectionViewLayout = createLayout()
+        geometricTessellation()
+        shareingUserView.dataSource = self
+    }
+    
+    
+    private func geometricTessellation()  {
         shareingUserView.register(UINib(nibName: "StyleLoreCell", bundle: nil), forCellWithReuseIdentifier: "StyleLoreCell")
         shareingUserView.showsHorizontalScrollIndicator = false
         
         shareingUserView.delegate = self
-        shareingUserView.dataSource = self
     }
     func createLayout() -> UICollectionViewLayout {
         let jsion = UICollectionViewFlowLayout.init()

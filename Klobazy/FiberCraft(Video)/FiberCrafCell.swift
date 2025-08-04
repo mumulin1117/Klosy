@@ -29,7 +29,7 @@ class FiberCrafCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        floralDigital.layer.cornerRadius = 25
         
         ombreGradient()
         colorBlocking()
@@ -38,13 +38,19 @@ class FiberCrafCell: UICollectionViewCell {
 
     
     func ombreGradient()  {
-        floralDigital.layer.cornerRadius = 25
+        
         floralDigital.layer.masksToBounds = true
+        dickeyDetachable()
+        self.layer.masksToBounds = true
+    }
+    
+    
+    
+    private func dickeyDetachable()  {
         bgSioView.layer.cornerRadius = 25
         bgSioView.layer.masksToBounds = true
         
         self.layer.cornerRadius = 32
-        self.layer.masksToBounds = true
     }
     
     func colorBlocking()  {

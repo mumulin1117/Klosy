@@ -74,19 +74,19 @@ class FiberCraftntroller: UIViewController ,UICollectionViewDelegate,UICollectio
  
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        handmadeElegance.delegate = self
         fabricEnchantment()
         
     }
-    
+    let elasticCord = UILabel.walkingPresser(hole: "ddaotpa")
     func fabricEnchantment()  {
         handmadeElegance.register(UINib(nibName: "FiberCrafCell", bundle: nil), forCellWithReuseIdentifier: "FiberCrafCell")
         handmadeElegance.showsHorizontalScrollIndicator = false
         
-        handmadeElegance.delegate = self
+        
         handmadeElegance.dataSource = self
         SVProgressHUD.show()
-        UIImageView.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["reworkedVintage":1,"textileCollage":1,"fabricManipulation":10,
+        UIColor.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["reworkedVintage":1,"textileCollage":1,"fabricManipulation":10,
                                                                               
                                                                                "slowFashion":"54878812"
                                                                                
@@ -94,7 +94,7 @@ class FiberCraftntroller: UIViewController ,UICollectionViewDelegate,UICollectio
             SVProgressHUD.dismiss()
             if let glsss = fart as? [String: Any],
                
-                let rns = glsss["data"] as? Array<[String: Any]>  {
+                let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
                 
                 self.sticchtalk = rns.filter({ dadeboy in
                     dadeboy["garmentArtistry"] as? String != nil

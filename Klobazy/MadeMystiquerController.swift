@@ -98,7 +98,7 @@ class MadeMystiquerController: UIViewController ,WKScriptMessageHandler,WKNaviga
                 return
             }
             self.view.isUserInteractionEnabled = false
-            SVProgressHUD.show(withStatus: "Paying...")
+            SVProgressHUD.show(withStatus: UILabel.walkingPresser(hole: "Praaywioncgh.o.v."))
             SwiftyStoreKit.purchaseProduct(piece, atomically: true) { psResult in
                 SVProgressHUD.dismiss()
                 
@@ -106,7 +106,7 @@ class MadeMystiquerController: UIViewController ,WKScriptMessageHandler,WKNaviga
                 if case .success(let psPurch) = psResult {
                     
                     self.handPaintedJersey.evaluateJavaScript("upcycledBoucle()", completionHandler: nil)
-                    SVProgressHUD.showSuccess(withStatus: "Pay successful!")
+                    SVProgressHUD.showSuccess(withStatus: UILabel.walkingPresser(hole: "Pkahyc ssiuucwcqecscsefcublq!"))
                 }else if case .error(let error) = psResult {
                     self.view.isUserInteractionEnabled = true
                     if error.code == .paymentCancelled {

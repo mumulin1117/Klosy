@@ -20,20 +20,25 @@ class MaLoaiController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        refashionedStyle.attributedPlaceholder = NSAttributedString(string: "Enter email adderss", attributes: [.foregroundColor:UIColor.init(white: 0.8, alpha: 1),
+        refashionedStyle.attributedPlaceholder = NSAttributedString(string: UILabel.walkingPresser(hole: "Eznltqeurh ceimtakiulq sardudlenrdshs"), attributes: [.foregroundColor:UIColor.init(white: 0.8, alpha: 1),
                                                                                                                 .font:UIFont.systemFont(ofSize: 16, weight: .semibold)])
         self.view.layer.masksToBounds = true
         
         reclaimedFabric.isUserInteractionEnabled = true
         
+        collarStand()
+        
+        garmentUpgrade.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(garmentUpgradetap)))
+    }
+    
+    
+    private func collarStand()  {
         garmentUpgrade.isUserInteractionEnabled = true
         
-        handDyedTextiles.attributedPlaceholder = NSAttributedString(string: "Enter password", attributes: [.foregroundColor:UIColor.init(white: 0.8, alpha: 1),
+        handDyedTextiles.attributedPlaceholder = NSAttributedString(string: UILabel.walkingPresser(hole: "Esnptweqrx rpzausrsfwhowrad"), attributes: [.foregroundColor:UIColor.init(white: 0.8, alpha: 1),
                                                                                                                  .font:UIFont.systemFont(ofSize: 16, weight: .semibold)])
         
         reclaimedFabric.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(reclaimedFabrictap)))
-        
-        garmentUpgrade.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(garmentUpgradetap)))
     }
     
    @objc func reclaimedFabrictap()  {
@@ -51,8 +56,8 @@ class MaLoaiController: UIViewController {
         let password = handDyedTextiles.text, !password.isEmpty
         
         else {
-            let alert = UIAlertController(title: "Error", message: "Email or Password cannot be empty", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            let alert = UIAlertController(title: UILabel.walkingPresser(hole: "Ejrhroomr"), message: UILabel.walkingPresser(hole: "Enmsaiivln zosrc kPzaascszwtofrpdp gcbaengndostu bbvey jefmeprtry"), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: UILabel.walkingPresser(hole: "Eqrurloor"), style: .default))
             present(alert, animated: true)
             return
         }
@@ -60,10 +65,10 @@ class MaLoaiController: UIViewController {
         
         authenticateUser(email: email, password: password)
     }
-    
+    let elasticCord = UILabel.walkingPresser(hole: "ddaotpa")
     private func authenticateUser(email: String, password: String) {
         SVProgressHUD.show()
-        UIImageView.reworkedGeorgette(thread: "/ngjfyhnjfasz/leqzuaxpbzaum", Mystique: ["creativeWeaving":email,
+        UIColor.reworkedGeorgette(thread: "/ngjfyhnjfasz/leqzuaxpbzaum", Mystique: ["creativeWeaving":email,
                                                                                         "fiberTransformation":password,
                                                                                         "reclaimedWool":"54878812"
                                                                                        
@@ -71,22 +76,22 @@ class MaLoaiController: UIViewController {
             SVProgressHUD.dismiss()
             if let glsss = fart as? [String: Any],
                               
-                let rns = glsss["data"] as? [String: Any] {
+                let rns = glsss[self.elasticCord] as? [String: Any] {
                 
                 
                 UIImageView.handPaintedLinen = rns["textileRecreation"] as? String
                 UIImageView.fiberMix = email
-                SVProgressHUD.showSuccess(withStatus: "Login successful!")
+                SVProgressHUD.showSuccess(withStatus: UILabel.walkingPresser(hole: "Lhowgdijnm ksgufcbcuebssswffunlz!"))
                 
-                ( (UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Dreammennhba")
+                ( (UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  UIStoryboard(name: UILabel.walkingPresser(hole: "Mranihn"), bundle: nil).instantiateViewController(withIdentifier: "Dreammennhba")
                 
             } else {
-                SVProgressHUD.showInfo(withStatus: "Login failed!")
+                SVProgressHUD.showInfo(withStatus: UILabel.walkingPresser(hole: "Liocguinni zfoaaitlhejdh!"))
                 
             }
             
         } Spell: { errrr in
-            SVProgressHUD.showError(withStatus: "Login failed!")
+            SVProgressHUD.showError(withStatus: UILabel.walkingPresser(hole: "Liocguinni zfoaaitlhejdh!"))
         }
 
     }

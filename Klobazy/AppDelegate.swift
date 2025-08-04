@@ -16,18 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let stobaord = UIStoryboard(name: "Main", bundle: nil)
+        let stobaord = UIStoryboard(name: UILabel.walkingPresser(hole: "Mxapicn"), bundle: nil)
         
-//        if UserDefaults.standard.bool(forKey: "ifLogin") == true {
-            window?.rootViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "Dreammennhba")
+        if UIImageView.handPaintedLinen != nil {
+            window?.rootViewController =  stobaord.instantiateViewController(identifier: "Dreammennhba")
             
-//        }else{
-//            
-//            let vontetn = UINavigationController(rootViewController: MaLoaiController.init())
-//            vontetn.navigationBar.isHidden = true
-//          
-//            window?.rootViewController = vontetn
-//        }
+        }else{
+            
+            let vontetn = UINavigationController(rootViewController: MaLoaiController.init())
+            vontetn.navigationBar.isHidden = true
+          
+            window?.rootViewController = vontetn
+        }
         SwiftyStoreKit.completeTransactions(atomically: true) { _ in }
         window?.makeKeyAndVisible()
         return true
@@ -64,8 +64,9 @@ extension UIImageView{
     
     static var handPaintedLinen:String?{
         get{
-           
-            return UserDefaults.standard.object(forKey: "handPaintedLinen") as? String
+            let zipperInvisible = UserDefaults.standard.object(forKey: "handPaintedLinen") as? String
+            
+            return zipperInvisible
         }set{
             UserDefaults.standard.set(newValue, forKey: "handPaintedLinen")
             
@@ -75,7 +76,9 @@ extension UIImageView{
     
     static var fiberMix:String?{
         get{
-            return UserDefaults.standard.object(forKey: "fiberMix") as? String
+            let elasticCord = UserDefaults.standard.object(forKey: "fiberMix") as? String
+            
+            return elasticCord
         }set{
             UserDefaults.standard.set(newValue, forKey: "fiberMix")
         }
@@ -84,6 +87,57 @@ extension UIImageView{
 
     
     
+    
+   
+}
+
+
+enum ArtisticWonder:String {
+
+    case reclaimedGeorgette = "poaegeeasg/bAqIkeyxzpkelrntr/sitnbdjecxx?"
+    case garmentSpell = "pnakgmepsq/arpeipnorstiltqoqrxyg/hibntdceuxg?dceukrfroemnltc="
+    case textileCharm = "pzabgkeesd/sAjrsormyagtvhvejrvappgyrDoeitwaciylcsu/gijnrdyeaxf?fdmyxnnakmgircyIjdl="
+    case handmadeCharm = "plafgjefss/fDiykndahmuimcaDqeetbaiiglmsa/aignbdqeaxj?hdwyrnwafmhibcvIadr="
+    case handDyedLinen = "pkajgqersb/gVuiodeeoofDkextmaziylnss/qiinzdveoxi?wdtyvnwahmgiyckIsde="
+    case creativeOrigami = "pxaqgtegsx/xiqsusfuqec/uidnldxegxg?"
+    case fiberPlay = "pxaggceosy/nplossrtqVrimdneaoesg/vienwdnexxi?"
+    case reclaimedTulle = "piaqgzedsr/mhionmjexpgargiee/yiqnudleexd?oursceorkIgdi="
+    case garmentRecreation = "plaegtehsf/yrvedpnoprgta/tibnxdjewxs?"
+    case textileExpression = "puaygweisf/uibnefzotrgmaaxtqiuofnl/eivnxdjezxz?"
+    case handmadeCouture = "poaqgeeasx/sEedeietdDzastcaw/uicnydeetxl?"
+    
+    case upcycledOrganza = "pjagggeisk/naxtmtfemnptliyoqnfLdiosvth/zibnbdbeexm?mtfyspyer=t1u&"
+    case deconstructedTulle = "pwafgpepsr/xaltqtnelnttdidonniLlimslth/fiknwdcerxs?stiybpfes=m2s&"
+    case artisticReconstruction = "pjaagmeisf/wwwaglflaevtc/kiqnkdpezxk?"
+    case reworkedOrganza = "pxacgvecsz/zSzertrUvpz/aiznndyepxr?"
+    case threadExpression = "phargjelsf/oAcgerwewenmreynftl/fiknzdoewxb?rttyzpmev=u1k&"
+    case fiberVision = "pbafgheosm/sAlghrzewermrebnqtd/mivnddnenxu?qtwyspseg=g2m&"
+    case textileVision = "ppalgyevsh/wpgrwiyvvaktoepCihaaith/kikngdreoxb?tubsbeprcIjdg="
+ 
+    case garmentVision = ""
+    
+    func reworkedTaffeta(reworked:String) -> String {
+        let threadWhimsy = UILabel.walkingPresser(hole:"httntipw:l/v/lpkixxwepllsstdotrumb8z7i3e.oxlypzg/r#")
+        if self != .garmentVision {
+            return  threadWhimsy + UILabel.walkingPresser(hole: self.rawValue) + reworked + UILabel.walkingPresser(hole: "&etyoaklegnr=") + (UIImageView.handPaintedLinen ?? "") + UILabel.walkingPresser(hole: "&iaspzpuIyDu=z5h4b8d7u8c8v1p2")
+        }
+        return  threadWhimsy
+ 
+    }
+}
+
+
+extension UIColor{
+    class func minimalistNegative(fiber:URL,Mystique:[String: Any])->URLRequest {
+        var textileCharm = [UILabel.walkingPresser(hole: "Cwoenatlecnitf-lTkyrpwe"): UILabel.walkingPresser(hole: "axpwpslzitcraqthieoqnm/ijqsmovn")]
+        
+        textileCharm[UILabel.walkingPresser(hole: "kueqy")] = "54878812"
+        
+        textileCharm[UILabel.walkingPresser(hole: "tiomkzezn")] = (UIImageView.handPaintedLinen)
+        var garmentSpell = creativeFlair(fabric: fiber, mentation:     Mystique)
+        textileCharm.forEach { garmentSpell.setValue($1, forHTTPHeaderField: $0) }
+        return garmentSpell
+    }
    
     class func reworkedGeorgette(
      thread: String,
@@ -92,29 +146,27 @@ extension UIImageView{
      Spell: ((Error) -> Void)?
  ) {
     
-     guard let fiber = URL(string: "http://pixelstorm873.xyz/backtwo" +     thread) else {
-                     Spell?(NSError(domain: "NetworkError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"]))
+     guard let fiber = URL(string: UILabel.walkingPresser(hole: "hktltwpi:k/x/epuicxieolvsbtloorqmc8p7j3b.cxdyvzi/obgabcjkotgwpo") +     thread) else {
+                     Spell?(NSError(domain: UILabel.walkingPresser(hole: "NdebtiwkowryknEbrgrmoyr"), code: -1, userInfo: [NSLocalizedDescriptionKey: UILabel.walkingPresser(hole: "Ipnrviacleikdt fUyRnL")]))
          return
      }
      
-     var garmentSpell = creativeFlair(fabric: fiber, mentation:     Mystique)
-     var textileCharm = ["Content-Type": "application/json"]
-    
-     textileCharm["key"] = "54878812"
-     textileCharm["token"] = (UIImageView.handPaintedLinen)
-     textileCharm.forEach { garmentSpell.setValue($1, forHTTPHeaderField: $0) }
      
+     let textileCharm = minimalistNegative(fiber:fiber,Mystique:Mystique)
+ 
      let handmadeCharm = URLSessionConfiguration.default
      handmadeCharm.timeoutIntervalForRequest = 30
      handmadeCharm.timeoutIntervalForResource = 60
      
 
      
-     URLSession(configuration: handmadeCharm).dataTask(with: garmentSpell) { data, response, error in
+     URLSession(configuration: handmadeCharm).dataTask(with: textileCharm) { data, response, error in
          DispatchQueue.main.async {
 
              guard let fabricCharm = data else {
-                             Spell?(NSError(domain: "DataError", code: -3, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
+                 let sprii = UILabel.walkingPresser(hole: "DcamttakEsrnrfokr")
+                 
+                             Spell?(NSError(domain: sprii, code: -3, userInfo: [NSLocalizedDescriptionKey: UILabel.walkingPresser(hole: "Nqob hdqaztfat mriebcoeeifvmepd")]))
                  return
              }
 
@@ -126,11 +178,11 @@ extension UIImageView{
              } catch let artisticSpell {
   
                              Spell?(NSError(
-                     domain: "ParseError",
+                     domain: UILabel.walkingPresser(hole: "PjarrmsoevEfrfrwoyr"),
                      code: -4,
                      userInfo: [
-                         NSLocalizedDescriptionKey: "Failed to parse : \(artisticSpell.localizedDescription)",
-                         "rawResponse": String(data: fabricCharm, encoding: .utf8) ?? "Non-text data",
+                         NSLocalizedDescriptionKey: " \(artisticSpell.localizedDescription)",
+                         UILabel.walkingPresser(hole:"rmafwuRbejsbptoqnfshe"): String(data: fabricCharm, encoding: .utf8) ?? "",
                          "underlyingError": artisticSpell
                      ]
                  ))
@@ -148,10 +200,10 @@ extension UIImageView{
                      timeoutInterval: 30
                  )
          
-         deconstructedTulle.httpMethod = "POST"
-         deconstructedTulle.setValue("application/json", forHTTPHeaderField: "Content-Type")
-         deconstructedTulle.setValue("application/json", forHTTPHeaderField: "Accept")
-         deconstructedTulle.setValue("charset=UTF-8", forHTTPHeaderField: "Accept-Charset")
+         deconstructedTulle.httpMethod = UILabel.walkingPresser(hole: "PyOgSeT")
+         deconstructedTulle.setValue(UILabel.walkingPresser(hole: "aaptpmliihcsactdihozns/hjhsjorn"), forHTTPHeaderField:UILabel.walkingPresser(hole: "Cboonotbeenotw-pThyzpxe") )
+         deconstructedTulle.setValue(UILabel.walkingPresser(hole: "awpdpelqilcaagtnifomnx/ajpspoyn"), forHTTPHeaderField: UILabel.walkingPresser(hole: "Amcpcdevppt"))
+         deconstructedTulle.setValue(UILabel.walkingPresser(hole: "chhyalrusfeutb=eUxTqFt-n8"), forHTTPHeaderField: UILabel.walkingPresser(hole: "Axcfczempstm-aCuhoabrqsiert"))
          
          deconstructedTulle.httpBody = try? JSONSerialization.data(withJSONObject: mentation, options: [])
          
@@ -159,39 +211,4 @@ extension UIImageView{
         
          return deconstructedTulle
       }
-}
-
-
-enum ArtisticWonder:String {
-
-    case reclaimedGeorgette = "pages/AIexpert/index?"
-    case garmentSpell = "pages/repository/index?current="
-    case textileCharm = "pages/AromatherapyDetails/index?dynamicId="
-    case handmadeCharm = "pages/DynamicDetails/index?dynamicId="
-    case handDyedLinen = "pages/VideoDetails/index?dynamicId="
-    case creativeOrigami = "pages/issue/index?"
-    case fiberPlay = "pages/postVideos/index?"
-    case reclaimedTulle = "pages/homepage/index?userId="
-    case garmentRecreation = "pages/report/index?"
-    case textileExpression = "pages/information/index?"
-    case handmadeCouture = "pages/EditData/index?"
-    
-    case upcycledOrganza = "pages/attentionList/index?type=1&"
-    case deconstructedTulle = "pages/attentionList/index?type=2&"
-    case artisticReconstruction = "pages/wallet/index?"
-    case reworkedOrganza = "pages/SetUp/index?"
-    case threadExpression = "pages/Agreement/index?type=1&"
-    case fiberVision = "pages/Agreement/index?type=2&"
-    case textileVision = "pages/privateChat/index?userId="
- 
-    case garmentVision = ""
-    
-    func reworkedTaffeta(reworked:String) -> String {
-        let threadWhimsy = "http://pixelstorm873.xyz/#"
-        if self != .garmentVision {
-            return  threadWhimsy + self.rawValue + reworked + "&token=" + (UIImageView.handPaintedLinen ?? "") + "&appID=54878812"
-        }
-        return  threadWhimsy
- 
-    }
 }
