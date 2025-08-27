@@ -29,6 +29,7 @@ class VinoViewCell: UICollectionViewCell {
     @IBOutlet weak var weltPocket: UIImageView!
     
     
+    @IBOutlet weak var toloaibe: UIButton!
     @IBOutlet weak var DIYtextiles: UILabel!
     
     

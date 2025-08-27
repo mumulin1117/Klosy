@@ -13,6 +13,10 @@ struct PatternChallenge {
        var submissions: [ThreadPost]
    }
 class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout, MaBottomUHEgydelegate, ThriftFlipViewdelegate{
+    func Sidu() {
+        dareplaure()
+    }
+    
     func dareplaure() {
         beforeImageView.contentMode = .scaleAspectFit
        
@@ -100,6 +104,7 @@ class StitchTalkntroller: UIViewController, UICollectionViewDelegate, UICollecti
         let maing = collectionView.dequeueReusableCell(withReuseIdentifier: "MaBottomUHEgy", for: indexPath) as! MaBottomUHEgy
         maing.sticchtalk = self.knowedgealk
         maing.talk = self
+        
         return maing
         
     }

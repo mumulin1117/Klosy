@@ -9,6 +9,8 @@ import UIKit
 
 protocol MaBottomUHEgydelegate {
     func cuffBarrelKnowedge(di:Int)
+    func Sidu()
+    
 }
 
 class MaBottomUHEgy: UICollectionViewCell {
@@ -91,8 +93,14 @@ extension MaBottomUHEgy:UICollectionViewDelegate,UICollectionViewDataSource{
         }
         maing.DIYtextiles.text = ingWode["freehandCutting"] as? String
         maing.bespokeAlterations.text = ingWode["layeredOutfits"] as? String
+        
+        maing.toloaibe.addTarget(self, action: #selector(bubufreeem), for: .touchUpInside)
         return maing
     }
     
-    
+   @objc func bubufreeem()  {
+       if self.talk != nil{
+           self.talk?.Sidu()
+       }
+    }
 }
