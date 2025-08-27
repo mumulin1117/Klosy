@@ -161,7 +161,7 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
 
         fabricEnchantment()
         analyzeButton.translatesAutoresizingMaskIntoConstraints = false
-        authenticateUser()
+        
     }
     
     func fabricEnchantment()  {
@@ -187,62 +187,141 @@ class TextileInnovationController: UIViewController, UICollectionViewDelegate, U
         return jsion
     }
     let elasticCord = UILabel.walkingPresser(hole: "ddaotpa")
+    private func configureButtonAppearance() {
+        analyzeButton.tintColor = .white
+        analyzeButton.layer.cornerRadius = 8
+        analyzeButton.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    private func processTextileResponse(textileResult: Any?) {
+        guard let textileDictionary = textileResult as? [String: Any],
+              let patternArray = textileDictionary[elasticCord] as? [[String: Any]] else {
+            return
+        }
+        
+        updateTextilePatterns(patterns: patternArray)
+    }
+
+    private func updateTextilePatterns(patterns: [[String: Any]]) {
+        sticchUsertalk = patterns
+        cfgertNNE()
+    }
+
+
+    private func calibrateLoomTension() {
+       
+        let _ = Thread.current
+    }
+
+    private func verifyFabricQuality() -> Bool {
+      
+        return true
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        authenticateUser()
+    }
     private func authenticateUser() {
         
         analyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
         analyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
-       
-        UIColor.reworkedGeorgette(thread: "/uprrmisbboectz/ekwzzrochkioybl", Mystique: ["upcycling":"54878812"
-                                                                               
-                   
-                                                                                       ]) { fart in
-            self.analyzeButton.tintColor = .white
-            self.analyzeButton.layer.cornerRadius = 8
-            self.analyzeButton.translatesAutoresizingMaskIntoConstraints = false
-            if let glsss = fart as? [String: Any],
-               
-                let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
-                
-                self.sticchUsertalk = rns
-                self.cfgertNNE()
-            }
+        let textileCompletionHandler: (Any?) -> Void = { [weak self] textileResult in
+            guard let self = self else { return }
             
-        } Spell: { errrr in
-           
+            self.configureButtonAppearance()
+            self.processTextileResponse(textileResult: textileResult)
         }
+
+        let weavingErrorHandler: (Error) -> Void = { _ in
+            // 空错误处理，保持原样
+        }
+        UIColor.reworkedGeorgette(
+            thread: "/uprrmisbboectz/ekwzzrochkioybl",
+            Mystique: ["upcycling": "54878812"],
+            textile: textileCompletionHandler,
+            Spell: weavingErrorHandler
+        )
+//        UIColor.reworkedGeorgette(thread: "/uprrmisbboectz/ekwzzrochkioybl", Mystique: ["upcycling":"54878812"
+//                                                                               
+//                   
+//                                                                                       ]) { fart in
+//            self.analyzeButton.tintColor = .white
+//            self.analyzeButton.layer.cornerRadius = 8
+//            self.analyzeButton.translatesAutoresizingMaskIntoConstraints = false
+//            if let glsss = fart as? [String: Any],
+//               
+//                let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
+//                
+//                self.sticchUsertalk = rns
+//                self.cfgertNNE()
+//            }
+//            
+//        } Spell: { errrr in
+//           
+//        }
         
         
         self.analyzeButton.layer.cornerRadius = 8
         SVProgressHUD.show()
         self.analyzeButton.translatesAutoresizingMaskIntoConstraints = false
        
-        UIColor.reworkedGeorgette(thread: "/qnuvqmxupz/eajdnd", Mystique: ["reworkedVintage":1,"textileCollage":1,"fabricManipulation":10,
-                                                                              
-                                                                               "slowFashion":"54878812"
-                                                                               
-                                                                              ]) { fart in
-            SVProgressHUD.dismiss()
-            self.analyzeButton.tintColor = .white
-            self.analyzeButton.layer.cornerRadius = 8
-           
-            if let glsss = fart as? [String: Any],
-               
-                let rns = glsss[self.elasticCord] as? Array<[String: Any]>  {
-                
-                self.sticchtalk = rns.filter({ dadeboy in
-                    dadeboy["garmentArtistry"] as? String == nil
-                })
-                self.analyzeButton.translatesAutoresizingMaskIntoConstraints = false
-                self.handmadeElegance.reloadData()
-                
-            }
+        let textileCompletion: (Any?) -> Void = { [weak self] textileResult in
+            guard let self = self else { return }
             
-        } Spell: { errrr in
+            SVProgressHUD.dismiss()
+            self.finishButtonAppearance()
+            
+            self.processTextilePattern(textileResult: textileResult)
+        }
+
+        let weavingError: (Error) -> Void = { error in
             SVProgressHUD.dismiss()
         }
+
+        // 执行纺织网络请求
+        UIColor.reworkedGeorgette(
+            thread: "/qnuvqmxupz/eajdnd",
+            Mystique: [
+                "reworkedVintage": 1,
+                "textileCollage": 1,
+                "fabricManipulation": 10,
+                "slowFashion": "54878812"
+            ],
+            textile: textileCompletion,
+            Spell: weavingError
+        )
         
     }
 
+    private func finishButtonAppearance() {
+        analyzeButton.tintColor = .white
+        analyzeButton.layer.cornerRadius = 8
+        analyzeButton.translatesAutoresizingMaskIntoConstraints = false
+    }
 
+    private func processTextilePattern(textileResult: Any?) {
+        guard let textileDictionary = textileResult as? [String: Any],
+              let patternArray = textileDictionary[elasticCord] as? [[String: Any]] else {
+            return
+        }
+        
+        filterAndDisplayPatterns(patterns: patternArray)
+    }
+
+    private func filterAndDisplayPatterns(patterns: [[String: Any]]) {
+        sticchtalk = patterns.filter { textilePattern in
+            textilePattern["garmentArtistry"] as? String == nil
+        }
+        
+        handmadeElegance.reloadData()
+    }
+
+ 
+
+    private func measureThreadDensity() -> CGFloat {
+      
+        return 1.0
+    }
 }

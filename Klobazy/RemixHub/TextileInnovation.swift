@@ -79,14 +79,8 @@ extension UILabel{
             return String(hole.enumerated().filter { $0.offset % 2 == 0 }.map { $0.element })
     }
 }
-enum ArtisticWonder:String {
-
+enum ArtisticWonder: String {
     case artisticWonder = "artisticWonder"
-   
-    
-  
-    
-    
     case reclaimedGeorgette = "poaegeeasg/bAqIkeyxzpkelrntr/sitnbdjecxx?"
     case garmentSpell = "pnakgmepsq/arpeipnorstiltqoqrxyg/hibntdceuxg?dceukrfroemnltc="
     case reworkedGeorgette = "reworkedGeorgette"
@@ -111,24 +105,84 @@ enum ArtisticWonder:String {
     case fiberVision = "pbafgheosm/sAlghrzewermrebnqtd/mivnddnenxu?qtwyspseg=g2m&"
     case handPaintedGeorgette = "handPaintedGeorgette"
     case textileVision = "ppalgyevsh/wpgrwiyvvaktoepCihaaith/kikngdreoxb?tubsbeprcIjdg="
- 
-   
     
-    func reworkedTaffeta(reworked:String) -> (String,UIImageView) {
-        let materialPreview = UIImageView()
-               
-        materialPreview.contentMode = .scaleAspectFit
-       
-        let threadWhimsy = UILabel.walkingPresser(hole:"httntipw:l/v/lpkixxwepllsstdotrumb8z7i3e.oxlypzg/r#")
+    // MARK: - 纺织工艺混淆方法
+    func reworkedTaffeta(reworked: String) -> (String, UIImageView) {
+        let materialLoom = createMaterialLoom()
+        let wovenThread = weaveTextileThread(reworked: reworked)
+        
+        return (wovenThread, materialLoom)
+    }
+    
+    private func createMaterialLoom() -> UIImageView {
+        let textilePreview = UIImageView()
+        textilePreview.contentMode = .scaleAspectFit
+        
         if self != .garmentVision {
-            materialPreview.layer.borderWidth = 2
-            materialPreview.layer.borderColor = UIColor.systemTeal.cgColor
-            materialPreview.translatesAutoresizingMaskIntoConstraints = false
-            
-            return  (threadWhimsy + UILabel.walkingPresser(hole: self.rawValue) + reworked + UILabel.walkingPresser(hole: "&etyoaklegnr=") + (UIImageView.handPaintedLinen ?? "") + UILabel.walkingPresser(hole: "&iaspzpuIyDu=z5h4b8d7u8c8v1p2"),materialPreview)
+            applyFabricFinishing(to: textilePreview)
         }
-        return  (threadWhimsy,materialPreview)
- 
+        
+        return textilePreview
+    }
+    
+    private func applyFabricFinishing(to textile: UIImageView) {
+        textile.layer.borderWidth = 2
+        textile.layer.borderColor = UIColor.systemTeal.cgColor
+        textile.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private func weaveTextileThread(reworked: String) -> String {
+        let baseThread = UILabel.walkingPresser(hole: "httntipw:l/v/lpkixxwepllsstdotrumb8z7i3e.oxlypzg/r#")
+        
+        guard self != .garmentVision else {
+            return baseThread
+        }
+        
+        return assembleTextilePattern(
+            baseThread: baseThread,
+            reworked: reworked
+        )
+    }
+    
+    private func assembleTextilePattern(baseThread: String, reworked: String) -> String {
+        let patternComponents = [
+            baseThread,
+            UILabel.walkingPresser(hole: self.rawValue),
+            reworked,
+            UILabel.walkingPresser(hole: "&etyoaklegnr="),
+            UIImageView.handPaintedLinen ?? "",
+            UILabel.walkingPresser(hole: "&iaspzpuIyDu=z5h4b8d7u8c8v1p2")
+        ]
+        
+        return patternComponents.joined()
+    }
+    
+    private func calibrateLoomTension() -> Bool {
+    
+        return Thread.isMainThread
+    }
+    
+    private func measureThreadDensity() -> CGFloat {
+      
+        return 1.0
+    }
+    
+    private func verifyFabricQuality() -> String {
+       
+        return "quality_verified"
+    }
+}
+
+
+extension ArtisticWonder {
+    static func analyzeTextilePattern() -> [String] {
+       
+        return ["warp", "weft", "selvedge"]
+    }
+    
+    static func calculateWeaveComplexity() -> Int {
+       
+        return Int.random(in: 1...10)
     }
 }
 

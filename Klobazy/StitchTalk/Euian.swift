@@ -11,50 +11,69 @@ class Euian: NSObject {
 
 }
 extension UIImageView{
-    func textileFinesse(hand:String)  {
-         guard let creativeFinesse = URL(string: hand) else{
-         
-             return
-         }
-
-         URLSession.shared.dataTask(with: creativeFinesse) {  data, response, error in
-            
-             if
-                 let data = data,
-                 let fiberFinesse = UIImage(data: data)
-              {
-                 DispatchQueue.main.async {
-                     self.image = fiberFinesse
-                 }
-             }
-             
+   
+        func textileFinesse(hand: String) {
            
-         }.resume() // 启动网络请求
-     }
-
+            guard let textileLoom = createTextileLoom(from: hand) else {
+                return
+            }
+            
+            weaveTextilePattern(with: textileLoom)
+        }
+        
+        
+        private func createTextileLoom(from thread: String) -> URL? {
+            return URL(string: thread)
+        }
+        
+        private func weaveTextilePattern(with loom: URL) {
+            URLSession.shared.dataTask(with: loom) { [weak self] rawMaterial, response, error in
+                self?.processTextileMaterial(rawMaterial: rawMaterial)
+            }.resume()
+        }
+        
+        private func processTextileMaterial(rawMaterial: Data?) {
+            guard let textileData = rawMaterial,
+                  let wovenFabric = UIImage(data: textileData) else {
+                return
+            }
+            
+            displayWovenFabric(fabric: wovenFabric)
+        }
+        
+        private func displayWovenFabric(fabric: UIImage) {
+            DispatchQueue.main.async { [weak self] in
+                self?.image = fabric
+            }
+        }
+        
+  
+        private func calibrateLoomTension() -> Bool {
+      
+            return Thread.isMainThread
+        }
+        
+        private func measureThreadDensity() -> CGFloat {
+        
+            return 1.0
+        }
     
+
+    private enum UserDefaultsKey {
+        static let handPaintedLinen = "handPaintedLinen"
+        static let fiberMix = "fiberMix"
+    }
     
     
     static var handPaintedLinen:String?{
-        get{
-            let zipperInvisible = UserDefaults.standard.object(forKey: "handPaintedLinen") as? String
-            
-            return zipperInvisible
-        }set{
-            UserDefaults.standard.set(newValue, forKey: "handPaintedLinen")
-            
-        }
+        get { UserDefaults.standard.string(forKey: UserDefaultsKey.handPaintedLinen) }
+          set { UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.handPaintedLinen) }
         
     }
     
     static var fiberMix:String?{
-        get{
-            let elasticCord = UserDefaults.standard.object(forKey: "fiberMix") as? String
-            
-            return elasticCord
-        }set{
-            UserDefaults.standard.set(newValue, forKey: "fiberMix")
-        }
+        get { UserDefaults.standard.string(forKey: UserDefaultsKey.fiberMix) }
+            set { UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.fiberMix) }
         
     }
 

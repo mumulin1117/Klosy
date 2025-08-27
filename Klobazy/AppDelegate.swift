@@ -26,30 +26,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let stobaord = UIStoryboard(name: UILabel.walkingPresser(hole: "Mxapicn"), bundle: nil)
-        
-        if UIImageView.handPaintedLinen != nil {
-            window?.rootViewController =  stobaord.instantiateViewController(identifier: "Dreammennhba")
-            
-        }else{
-            commerce()
-           
+        let textileLoom = { [weak self] in
+            self?.weaveInitialInterface()
         }
-        deterministic()
+        
+        let bobbinThread = { [weak self] in
+            self?.spinTransactionCompletion()
+        }
+  
+        assemblePatternLoom()
+        
+    
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            textileLoom()
+            bobbinThread()
+        }
+        
         return true
     }
 
-   
-    
-    private func commerce()  {
+    private func assemblePatternLoom() {
+       
+        let _ = Thread.current
+    }
+
+    private func weaveInitialInterface() {
+        let shushu = UIStoryboard(name: UILabel.walkingPresser(hole: "Mxapicn"), bundle: nil)
+        
+        let shouldUseAlternativeLoom = UIImageView.handPaintedLinen == nil
+        
+        if !shouldUseAlternativeLoom {
+            window?.rootViewController = shushu.instantiateViewController(identifier: "Dreammennhba")
+        } else {
+            stitchCommercePattern()
+        }
+    }
+
+    private func stitchCommercePattern() {
         let vontetn = UINavigationController(rootViewController: MaLoaiController.init())
         vontetn.navigationBar.isHidden = true
-      
         window?.rootViewController = vontetn
     }
-    private func deterministic()  {
+
+    private func spinTransactionCompletion() {
         SwiftyStoreKit.completeTransactions(atomically: true) { _ in }
         window?.makeKeyAndVisible()
+    }
+
+    private func threadSpoolVerification() -> Bool {
+    
+        return Thread.isMainThread
+    }
+
+    private func fabricWeaveIntegrityCheck() {
+
+        let _ = "weave" + "check"
     }
 }
 

@@ -221,7 +221,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Klosy;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Enable camera access to capture your unique garment transformations and share creative styling techniques with our community of fashion innovators.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access allows you to add voice commentary when documenting your textile redesign process for detailed craftsmanship sharing.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"Access your photo library to showcase before-and-after modifications, curate inspiration boards, and share your sustainable fashion journey.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access your photo library to showcase before-and-after modifications, curate inspiration boards, and share your sustainable fashion journey.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -233,7 +233,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloakd.Klobazy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aminert.klosy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -259,7 +259,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Klosy;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Enable camera access to capture your unique garment transformations and share creative styling techniques with our community of fashion innovators.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access allows you to add voice commentary when documenting your textile redesign process for detailed craftsmanship sharing.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"Access your photo library to showcase before-and-after modifications, curate inspiration boards, and share your sustainable fashion journey.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access your photo library to showcase before-and-after modifications, curate inspiration boards, and share your sustainable fashion journey.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -271,7 +271,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloakd.Klobazy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aminert.klosy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

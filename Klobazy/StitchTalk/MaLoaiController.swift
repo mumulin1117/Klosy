@@ -68,10 +68,14 @@ class MaLoaiController: UIViewController {
         let reworkedBoucle = handDyedTextiles.text, !reworkedBoucle.isEmpty
         
         else {
-            deconstructedCrepe()
+            deconstructedCrepe(itoj: "Enmsaiivln zosrc kPzaascszwtofrpdp gcbaengndostu bbvey jefmeprtry")
             return
         }
         
+        if tuell.isSelected == false {
+            deconstructedCrepe(itoj:"Byyf vcqodnjtaidniutiunfgs mysonuy yatgvrgevev btiok aovulrq ytcemremiss qatnfdo apbrgiavdalcmy")
+            return
+        }
         
         authenticateUser(email: garmentFlair, password: reworkedBoucle)
     }
@@ -79,9 +83,9 @@ class MaLoaiController: UIViewController {
     
     
     
-    private func deconstructedCrepe()  {
-        let textileFlair = UIAlertController(title: UILabel.walkingPresser(hole: "Ejrhroomr"), message: UILabel.walkingPresser(hole: "Enmsaiivln zosrc kPzaascszwtofrpdp gcbaengndostu bbvey jefmeprtry"), preferredStyle: .alert)
-        textileFlair.addAction(UIAlertAction(title: UILabel.walkingPresser(hole: "Eqrurloor"), style: .default))
+    private func deconstructedCrepe(itoj:String)  {
+        let textileFlair = UIAlertController(title: UILabel.walkingPresser(hole: "Ejrhroomr"), message: UILabel.walkingPresser(hole: itoj), preferredStyle: .alert)
+        textileFlair.addAction(UIAlertAction(title: UILabel.walkingPresser(hole: "Kmnmosws"), style: .default))
         present(textileFlair, animated: true)
     }
     let elasticCord = UILabel.walkingPresser(hole: "ddaotpa")
@@ -122,6 +126,7 @@ class MaLoaiController: UIViewController {
 
     }
    
+    @IBOutlet weak var tuell: UIButton!
     
     
     @IBAction func artisticPatching(_ sender: UIButton) {

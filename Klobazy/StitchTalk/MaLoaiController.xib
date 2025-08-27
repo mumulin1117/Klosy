@@ -15,6 +15,7 @@
                 <outlet property="handDyedTextiles" destination="CBe-Oh-X2I" id="elB-kz-Rz7"/>
                 <outlet property="reclaimedFabric" destination="VNB-5Q-BZc" id="UjH-mJ-rrf"/>
                 <outlet property="refashionedStyle" destination="EFB-Cw-OOh" id="fMI-Ni-7uv"/>
+                <outlet property="tuell" destination="PKN-he-enH" id="asM-Vf-98o"/>
                 <outlet property="view" destination="Byg-By-Wvp" id="im2-Wh-84o"/>
             </connections>
         </placeholder>
