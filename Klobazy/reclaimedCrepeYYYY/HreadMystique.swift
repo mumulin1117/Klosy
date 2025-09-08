@@ -67,9 +67,7 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         if artisticGround == true {
             let  colorIndividuality = UIButton.init()
             colorIndividuality.setTitle("Quickly log", for: .normal)
-//            colorIndividuality.setBackgroundImage(UIImage.init(named: "upcycling"), for: .normal)
-//            colorIndividuality.setTitleColor(.white, for: .normal)
-//            colorIndividuality.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
+
             colorIndividuality.isUserInteractionEnabled = false
             view.addSubview(colorIndividuality)
             colorIndividuality.translatesAutoresizingMaskIntoConstraints = false
