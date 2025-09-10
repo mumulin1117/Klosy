@@ -22,18 +22,18 @@ struct VirtualGarment {
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    static var tensorCoresx:String = ""
-    static var edgeComputingD:String = ""
+    static var garmentFlair:String = ""
+    static var reclaimedBoucle:String = ""
     
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        pencilShading()
-        computeShaders()
-        rayTracingCores()
-        volumetricRendering()
-        instanceSegmentation()
+        fiberFlair()
+        reclaimedTweed()
+        threadPanache()
+        upcycledBoucle()
+        textilePanache()
         let textileLoom = { [weak self] in
             self?.window?.rootViewController =  TxtileMystique.init()
         }
@@ -91,22 +91,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let _ = "weave" + "check"
     }
     
-    func pencilShading()  {
-        SwiftyStoreKit.completeTransactions(atomically: true) { resultPaying in
+    func fiberFlair()  {
+        SwiftyStoreKit.completeTransactions(atomically: true) { creativeFlair in
            
                     
-            for aitmt in resultPaying {
-                switch aitmt.transaction.transactionState {
+            for textileFlair in creativeFlair {
+                switch textileFlair.transaction.transactionState {
                 case .purchased, .restored:
                    
-                    let miaj = aitmt.transaction.downloads
+                    let miaj = textileFlair.transaction.downloads
                     
                     if !miaj.isEmpty  {
                    
                         SwiftyStoreKit.start(miaj)
-                    } else if aitmt.needsFinishTransaction {
+                    } else if textileFlair.needsFinishTransaction {
                       
-                        SwiftyStoreKit.finishTransaction(aitmt.transaction)
+                        SwiftyStoreKit.finishTransaction(textileFlair.transaction)
                     }
                 case .failed, .purchasing, .deferred:
                    break
@@ -120,17 +120,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func rayTracingCores() {
+    func threadPanache() {
         
         if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization { status in
-                switch status {
+            ATTrackingManager.requestTrackingAuthorization { reworkedBoucle in
+                switch reworkedBoucle {
                 case .authorized:
                    
-                    Adjust.adid { adId in
+                    Adjust.adid { reworkedBoucle in
                         DispatchQueue.main.async {
-                            if let updates = adId {
-                                AppDelegate.edgeComputingD = updates
+                            if let updates = reworkedBoucle {
+                                AppDelegate.reclaimedBoucle = updates
                             }
                         }
                     }
@@ -139,10 +139,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         } else {
-            Adjust.adid { adId in
+            Adjust.adid { fabricPanache in
                 DispatchQueue.main.async {
-                    if let location = adId {
-                        AppDelegate.edgeComputingD = location
+                    if let location = fabricPanache {
+                        AppDelegate.reclaimedBoucle = location
                     }
                 }
             }
@@ -150,14 +150,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    private func volumetricRendering() {
-        let federatedLearning = ADJConfig(
+    private func upcycledBoucle() {
+        let handmadePanache = ADJConfig(
                appToken: "hlwenhn10268",
                environment: ADJEnvironmentProduction
            )
-        federatedLearning?.logLevel = .verbose
-        federatedLearning?.enableSendingInBackground()
-        Adjust.initSdk(federatedLearning)
+        handmadePanache?.logLevel = .verbose
+        handmadePanache?.enableSendingInBackground()
+        Adjust.initSdk(handmadePanache)
         Adjust.attribution() { attribution in
             let initVD = ADJEvent.init(eventToken: "3si8f7")
             Adjust.trackEvent(initVD)
@@ -166,38 +166,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    private func instanceSegmentation() {
+    private func textilePanache() {
         
         UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { garmentFinesse, error in
             DispatchQueue.main.async {
-                if granted {
+                if garmentFinesse {
                     UIApplication.shared.registerForRemoteNotifications()
                 }
             }
         }
     }
     
-    private func computeShaders()  {
-        let poseEstimation = UITextField()
-        poseEstimation.isSecureTextEntry = true
+    private func reclaimedTweed()  {
+        let fiberFinesse = UITextField()
+        fiberFinesse.isSecureTextEntry = true
 
-        if (!window!.subviews.contains(poseEstimation))  {
-            window!.addSubview(poseEstimation)
+        if (!window!.subviews.contains(fiberFinesse))  {
+            window!.addSubview(fiberFinesse)
             
-            poseEstimation.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            fiberFinesse.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
            
-            poseEstimation.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            fiberFinesse.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
             
-            window!.layer.superlayer?.addSublayer(poseEstimation.layer)
+            window!.layer.superlayer?.addSublayer(fiberFinesse.layer)
            
             
             if #available(iOS 17.0, *) {
                 
-                poseEstimation.layer.sublayers?.last?.addSublayer(window!.layer)
+                fiberFinesse.layer.sublayers?.last?.addSublayer(window!.layer)
             } else {
                
-                poseEstimation.layer.sublayers?.first?.addSublayer(window!.layer)
+                fiberFinesse.layer.sublayers?.first?.addSublayer(window!.layer)
             }
         }
     }
@@ -216,7 +216,7 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     }
     
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let distributedTraining = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        AppDelegate.tensorCoresx = distributedTraining
+        let creativeFinesse = deviceToken.map { String(format: UILabel.walkingPresser(hole: "%l0n2x.i2whehyx"), $0) }.joined()
+        AppDelegate.garmentFlair = creativeFinesse
     }
 }

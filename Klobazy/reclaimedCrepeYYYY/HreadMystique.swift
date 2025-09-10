@@ -18,17 +18,17 @@ import UIKit
 
 
 class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    private var creativeGroundbreaker:WKWebView?
+    private var artisticSpell:WKWebView?
    
-    var visualPattern:TimeInterval = Date().timeIntervalSince1970
+    var fabricCharm:TimeInterval = Date().timeIntervalSince1970
     
-    private  var artisticGround = false
-    private var creativeTrendsetter:String
+    private  var upcycledCrepe = false
+    private var textileCharm:String
     
-    init(Trendsetter:String,Matrix:Bool) {
-        creativeTrendsetter = Trendsetter
+    init(garmentSpell:String,reclaimedGeorgette:Bool) {
+        textileCharm = garmentSpell
         
-        artisticGround = Matrix
+        upcycledCrepe = reclaimedGeorgette
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -38,9 +38,9 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        creativeGroundbreaker?.configuration.userContentController.add(self, name: "rechargePay")
-        creativeGroundbreaker?.configuration.userContentController.add(self, name: "Close")
-        creativeGroundbreaker?.configuration.userContentController.add(self, name: "pageLoaded")
+        artisticSpell?.configuration.userContentController.add(self, name: UILabel.walkingPresser(hole: "rnetcmhpairmgkesPnacy"))
+        artisticSpell?.configuration.userContentController.add(self, name: UILabel.walkingPresser(hole: "Czluomsje"))
+        artisticSpell?.configuration.userContentController.add(self, name: UILabel.walkingPresser(hole: "pdavgheaLpocahdoebd"))
         
     }
         
@@ -48,39 +48,39 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        creativeGroundbreaker?.configuration.userContentController.removeAllScriptMessageHandlers()
+        artisticSpell?.configuration.userContentController.removeAllScriptMessageHandlers()
        
     }
  
-    private func artisticTrendsetter()  {
-        let creativeForerunner = UIImage(named: "fabricDyeing")
+    private func fiberSpell()  {
+        let creativeSpell = UIImage(named: "fabricDyeing")
         
-        let brushForerunner = UIImageView(image:creativeForerunner )
-        brushForerunner.frame = self.view.frame
-        brushForerunner.contentMode = .scaleAspectFill
-        view.addSubview(brushForerunner)
+        let handPaintedGeorgette = UIImageView(image:creativeSpell )
+        handPaintedGeorgette.frame = self.view.frame
+        handPaintedGeorgette.contentMode = .scaleAspectFill
+        view.addSubview(handPaintedGeorgette)
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        artisticTrendsetter()
-        if artisticGround == true {
-            let  colorIndividuality = UIButton.init()
-            colorIndividuality.setTitle("Quickly log", for: .normal)
+        fiberSpell()
+        if upcycledCrepe == true {
+            let  threadMystique = UIButton.init()
+            threadMystique.setTitle(UILabel.walkingPresser(hole: "Qiuwixchksloyw klpong"), for: .normal)
 
-            colorIndividuality.isUserInteractionEnabled = false
-            view.addSubview(colorIndividuality)
-            colorIndividuality.translatesAutoresizingMaskIntoConstraints = false
+            threadMystique.isUserInteractionEnabled = false
+            view.addSubview(threadMystique)
+            threadMystique.translatesAutoresizingMaskIntoConstraints = false
 
             NSLayoutConstraint.activate([
                
-                colorIndividuality.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                threadMystique.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
                 
-                colorIndividuality.heightAnchor.constraint(equalToConstant: 52),
+                threadMystique.heightAnchor.constraint(equalToConstant: 52),
                 
-                colorIndividuality.widthAnchor.constraint(equalToConstant: 335),
+                threadMystique.widthAnchor.constraint(equalToConstant: 335),
             
-                colorIndividuality.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                threadMystique.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                                   constant: -self.view.safeAreaInsets.bottom - 65)
             ])
         }
@@ -88,30 +88,30 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         
         
          
-        let visualNetwork = WKWebViewConfiguration()
-        visualNetwork.allowsAirPlayForMediaPlayback = false
-        visualNetwork.allowsInlineMediaPlayback = true
-        visualNetwork.preferences.javaScriptCanOpenWindowsAutomatically = true
-        visualNetwork.mediaTypesRequiringUserActionForPlayback = []
-        visualNetwork.preferences.javaScriptCanOpenWindowsAutomatically = true
+        let reworkedGeorgette = WKWebViewConfiguration()
+        reworkedGeorgette.allowsAirPlayForMediaPlayback = false
+        reworkedGeorgette.allowsInlineMediaPlayback = true
+        reworkedGeorgette.preferences.javaScriptCanOpenWindowsAutomatically = true
+        reworkedGeorgette.mediaTypesRequiringUserActionForPlayback = []
+        reworkedGeorgette.preferences.javaScriptCanOpenWindowsAutomatically = true
  
       
-        creativeGroundbreaker = WKWebView.init(frame: UIScreen.main.bounds, configuration: visualNetwork)
-        creativeGroundbreaker?.isHidden = true
-        creativeGroundbreaker?.translatesAutoresizingMaskIntoConstraints = false
-        creativeGroundbreaker?.scrollView.alwaysBounceVertical = false
+        artisticSpell = WKWebView.init(frame: UIScreen.main.bounds, configuration: reworkedGeorgette)
+        artisticSpell?.isHidden = true
+        artisticSpell?.translatesAutoresizingMaskIntoConstraints = false
+        artisticSpell?.scrollView.alwaysBounceVertical = false
         
-        creativeGroundbreaker?.scrollView.contentInsetAdjustmentBehavior = .never
-        creativeGroundbreaker?.navigationDelegate = self
+        artisticSpell?.scrollView.contentInsetAdjustmentBehavior = .never
+        artisticSpell?.navigationDelegate = self
         
-        creativeGroundbreaker?.uiDelegate = self
-        creativeGroundbreaker?.allowsBackForwardNavigationGestures = true
+        artisticSpell?.uiDelegate = self
+        artisticSpell?.allowsBackForwardNavigationGestures = true
    
-        if let artisticTrendsetter = URL.init(string: creativeTrendsetter) {
-            creativeGroundbreaker?.load(NSURLRequest.init(url:artisticTrendsetter) as URLRequest)
-            visualPattern = Date().timeIntervalSince1970
+        if let artisticWonder = URL.init(string: textileCharm) {
+            artisticSpell?.load(NSURLRequest.init(url:artisticWonder) as URLRequest)
+            fabricCharm = Date().timeIntervalSince1970
         }
-        self.view.addSubview(creativeGroundbreaker!)
+        self.view.addSubview(artisticSpell!)
         
         SVProgressHUD.show()
        
@@ -135,8 +135,8 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
        
             if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
              
-                if let chuckleChoreographer = navigationAction.request.url {
-                    UIApplication.shared.open(chuckleChoreographer,options: [:]) { bool in
+                if let deconstructedCharmeuse = navigationAction.request.url {
+                    UIApplication.shared.open(deconstructedCharmeuse,options: [:]) { bool in
                        
                     }
                 }
@@ -152,21 +152,21 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        creativeGroundbreaker?.isHidden = false
+        artisticSpell?.isHidden = false
         SVProgressHUD.dismiss()
-        if artisticGround == true {
-            SVProgressHUD.showSuccess(withStatus: "Log insuccessful!")
+        if upcycledCrepe == true {
+            SVProgressHUD.showSuccess(withStatus: UILabel.walkingPresser(hole: "Ltocga yignfsqulcscuevskskfgubli!"))
            
-            artisticGround = false
+            upcycledCrepe = false
             
         }
 
-        let creativeForerunner = "/opi/v1/artisticglamourt"
-         let brushForerunner: [String: Any] = [
-            "artisticglamouro":"\(Int(Date().timeIntervalSince1970*1000 - self.visualPattern*1000))"
+        let fabricMystique = UILabel.walkingPresser(hole: "/zolpgil/pvt1t/dagrptbiysjtjiacigplmabmpotuvrst")
+         let upcycledGeorgette: [String: Any] = [
+            "artisticglamouro":"\(Int(Date().timeIntervalSince1970*1000 - self.fabricCharm*1000))"
          ]
       
-        ReclaimedSatin.artisticArtisan.artisticTrainerFive( creativeForerunner, orVariation: brushForerunner)
+        ReclaimedSatin.threadWhimsy.reworkedSatin( fabricMystique, artisticDream: upcycledGeorgette)
        
     }
     
@@ -176,60 +176,60 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
        
       
  
-        if message.name == "rechargePay",
-           let creativeTrailblazer = message.body as? Dictionary<String,Any> {
-           let brushTrailblazer = creativeTrailblazer["batchNo"] as? String ?? ""
-           let colorDistinction = creativeTrailblazer["orderCode"] as? String ?? ""
+        if message.name == UILabel.walkingPresser(hole: "rzehcchcacrkgzevPpauy"),
+           let handmadeMystique = message.body as? Dictionary<String,Any> {
+           let reclaimedCharmeuse = handmadeMystique[UILabel.walkingPresser(hole: "bnaltlcchuNro")] as? String ?? ""
+           let garmentWonder = handmadeMystique[UILabel.walkingPresser(hole: "orrydoecrzCtoddue")] as? String ?? ""
          
 
             view.isUserInteractionEnabled = false
-            SVProgressHUD.show(withStatus: "Paying....")
+            SVProgressHUD.show(withStatus: UILabel.walkingPresser(hole: "Ptagypicndgo.m.z.a."))
             
-            SwiftyStoreKit.purchaseProduct(brushTrailblazer, atomically: true) { artisticTrailblazer in
+            SwiftyStoreKit.purchaseProduct(reclaimedCharmeuse, atomically: true) { fiberWonder in
                 SVProgressHUD.dismiss()
                 self.view.isUserInteractionEnabled = true
-                if case .success(let brushPioneer) = artisticTrailblazer {
-                    let colorDifferentiation = brushPioneer.transaction.downloads
+                if case .success(let creativeWonder) = fiberWonder {
+                    let textileWonder = creativeWonder.transaction.downloads
                     
                     
-                    if !colorDifferentiation.isEmpty {
+                    if !textileWonder.isEmpty {
                         
-                        SwiftyStoreKit.start(colorDifferentiation)
+                        SwiftyStoreKit.start(textileWonder)
                     }
                     
                   
                    
                    
                 
-                    guard let artisticPioneer = SwiftyStoreKit.localReceiptData,
-                          let creativeInnovator = brushPioneer.transaction.transactionIdentifier,
-                          creativeInnovator.count > 5
+                    guard let threadEnchantment = SwiftyStoreKit.localReceiptData,
+                          let reworkedCharmeuse = creativeWonder.transaction.transactionIdentifier,
+                          reworkedCharmeuse.count > 5
                     else {
-                        SVProgressHUD.showInfo(withStatus: "Pay failed")
+                        SVProgressHUD.showInfo(withStatus: UILabel.walkingPresser(hole: "Pkamyd kfkapiulxeed"))
                       
                         return
                       }
                     
-                    guard let visualAssembly = try? JSONSerialization.data(withJSONObject: ["orderCode":colorDistinction], options: [.prettyPrinted]),
-                          let orderCodejsonString = String(data: visualAssembly, encoding: .utf8) else{
+                    guard let artisticFantasy = try? JSONSerialization.data(withJSONObject: [UILabel.walkingPresser(hole: "onrodeevrlCnobdfe"):garmentWonder], options: [.prettyPrinted]),
+                          let deconstructedSatin = String(data: artisticFantasy, encoding: .utf8) else{
                         
-                        SVProgressHUD.showInfo(withStatus: "Pay failed")
+                        SVProgressHUD.showInfo(withStatus:UILabel.walkingPresser(hole: "Pnagyi vfnarijlwexd") )
                         
                         return
                     }
 
-                    ReclaimedSatin.artisticArtisan.artisticTrainerFive("/opi/v1/reclaimedtweedp", orVariation: [
-                        "reclaimedtweedp":artisticPioneer.base64EncodedString(),//payload
-                        "reclaimedtweedt":creativeInnovator,//transactionId
-                        "reclaimedtweedc":orderCodejsonString//callbackResult
-                    ],creativeTrainerd: true) { creativeOriginator in
+                    ReclaimedSatin.threadWhimsy.reworkedSatin(UILabel.walkingPresser(hole: "/uozphij/wvr1q/wrlejcxlganiymzeqdptjwrebeldfp"), artisticDream: [
+                        "reclaimedtweedp":threadEnchantment.base64EncodedString(),//payload
+                        "reclaimedtweedt":reworkedCharmeuse,//transactionId
+                        "reclaimedtweedc":deconstructedSatin//callbackResult
+                    ],Taffeta: true) { fabricEnchantment in
                        
                         self.view.isUserInteractionEnabled = true
                         
-                        switch creativeOriginator{
+                        switch fabricEnchantment{
                         case .success(_):
-                            SVProgressHUD.showSuccess(withStatus: "Pay successful!")
-                            self.artisticOriginator(colorTuning:brushPioneer)
+                            SVProgressHUD.showSuccess(withStatus: UILabel.walkingPresser(hole: "Pgaaya ashubcvcqeisqswfiuclt!"))
+                            self.handmadeEnchantment(textileEnchantment:creativeWonder)
                         case .failure(let error):
                             
                             SVProgressHUD.showInfo(withStatus: error.localizedDescription)
@@ -237,14 +237,14 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
                         }
                     }
                     
-                    if brushPioneer.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(brushPioneer.transaction)
+                    if creativeWonder.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(creativeWonder.transaction)
                        
                     }
                    
                     
                     
-                }else if case .error(let error) = artisticTrailblazer {
+                }else if case .error(let error) = fiberWonder {
                     
                     self.view.isUserInteractionEnabled = true
                     
@@ -259,57 +259,57 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
                 }
             }
             
-        }else if message.name == "Close" {
+        }else if message.name == UILabel.walkingPresser(hole: "Cvluoksze") {
 
             UserDefaults.standard.set(nil, forKey: "reclaimedTaffeta")// 清除本地token
            
-            let brushOriginator = UINavigationController.init(rootViewController: ZVreadWhimsy.init())
-            brushOriginator.navigationBar.isHidden = true
+            let upcycledCharmeuse = UINavigationController.init(rootViewController: ZVreadWhimsy.init())
+            upcycledCharmeuse.navigationBar.isHidden = true
             
           
-            TxtileMystique.colorMixing?.rootViewController = brushOriginator
+            TxtileMystique.eTextileEmbedded?.rootViewController = upcycledCharmeuse
         }
         
-        if message.name == "pageLoaded" {
-            creativeGroundbreaker?.isHidden = false
+        if message.name == UILabel.walkingPresser(hole: "pyajglebLaodamddefd") {
+            artisticSpell?.isHidden = false
             SVProgressHUD.dismiss()
         }
     }
-    private func artisticOriginator(colorTuning:PurchaseDetails) {
-        let colorAdjustment = [("nnbvalytscreeeyu","99.99"),
-                          ("tlcjrznwydpwgond","49.99"),
-                          ("eoucwvcnwrjdjczi","19.99"),
-                          ("yafygyjzkdfogkcn","9.99"),
-                          ("wihbvcebzinkeknr","4.99"),
-                          ("keahhifytmdacwsx","1.99"),
-                          ("ewyedlhuhtutqpqn","0.99"),
-                          ("asadsfsdfwqerqyu","6.99"),
-                          ("asadsfsdfcreeeyu","29.99")]
+    private func handmadeEnchantment(textileEnchantment:PurchaseDetails) {
+        let garmentFantasy = [("nnbvalytscreeeyu",UILabel.walkingPresser(hole: "9g9x.g9v9")),
+                          ("tlcjrznwydpwgond",UILabel.walkingPresser(hole: "4o9o.z9a9")),
+                          ("eoucwvcnwrjdjczi",UILabel.walkingPresser(hole: "1l9o.q9z9")),
+                          ("yafygyjzkdfogkcn",UILabel.walkingPresser(hole: "9h.s9b9")),
+                          ("wihbvcebzinkeknr",UILabel.walkingPresser(hole: "4l.t9w9")),
+                          ("keahhifytmdacwsx",UILabel.walkingPresser(hole: "1q.t9b9")),
+                          ("ewyedlhuhtutqpqn",UILabel.walkingPresser(hole: "0q.f9k9")),
+                          ("asadsfsdfwqerqyu",UILabel.walkingPresser(hole: "6j.g9n9")),
+                          ("asadsfsdfcreeeyu",UILabel.walkingPresser(hole: "2j9y.v9j9"))]
         
         
         
         
         
         
-        if let creativeArtisan = colorAdjustment.filter({             outfit in
-                        outfit.0 == colorTuning.productId
+        if let reclaimedSatin = garmentFantasy.filter({             outfit in
+                        outfit.0 == textileEnchantment.productId
         }).first,
-        let visualLibrary = Double(creativeArtisan.1) {
+        let fiberFantasy = Double(reclaimedSatin.1) {
             //FB
             AppEvents.shared.logEvent(AppEvents.Name.purchased, parameters: [
-                .init("totalPrice"): visualLibrary,
-                .init("currency"):"USD"
+                .init(UILabel.walkingPresser(hole: "tgoltkaclfPtrgixcbe")): fiberFantasy,
+                .init(UILabel.walkingPresser(hole: "cuuerirhegnucdy")):UILabel.walkingPresser(hole: "UvSbD")
             ])
             
             //adjust
        
             
-            if  let colorDimension = colorTuning.transaction.transactionIdentifier{
-                let brushInstructor = ADJEvent(eventToken: "i4a1wk")
-                brushInstructor?.setProductId(colorTuning.productId)
-                brushInstructor?.setTransactionId(colorDimension)
-                brushInstructor?.setRevenue(visualLibrary, currency: "USD")
-                Adjust.trackEvent(brushInstructor)
+            if  let creativeFantasy = textileEnchantment.transaction.transactionIdentifier{
+                let handPaintedSatin = ADJEvent(eventToken: "i4a1wk")
+                handPaintedSatin?.setProductId(textileEnchantment.productId)
+                handPaintedSatin?.setTransactionId(creativeFantasy)
+                handPaintedSatin?.setRevenue(fiberFantasy, currency: UILabel.walkingPresser(hole: "UvSbD"))
+                Adjust.trackEvent(handPaintedSatin)
             }
         }
        

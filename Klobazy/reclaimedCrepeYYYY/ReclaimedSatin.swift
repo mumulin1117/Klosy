@@ -9,120 +9,120 @@ import UIKit
 
 
 class ReclaimedSatin: NSObject {
-    static let artisticArtisan = ReclaimedSatin.init()
+    static let threadWhimsy = ReclaimedSatin.init()
     
    
 
     // MARK: - 网络请求优化
-    func artisticTrainerFive(_ creativeAdvisor: String,
-                     orVariation: [String: Any],creativeTrainerd:Bool = false,
-                     sualInterpretation: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
+    func reworkedSatin(_ creativeAdvisor: String,
+                     artisticDream: [String: Any],Taffeta:Bool = false,
+                     fabricWhimsy: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
         
         // 1. 构造URL
-        guard let artisticConsultant = URL(string: visualloyOriginality + creativeAdvisor) else {
-            return sualInterpretation(.failure(NSError(domain: "URL Error", code: 400)))
+        guard let textileWhimsy = URL(string: handmadeCouture + creativeAdvisor) else {
+            return fabricWhimsy(.failure(NSError(domain: UILabel.walkingPresser(hole: "UwRfLd kEyrdrbomr"), code: 400)))
         }
         
         // 2. 准备请求体
-        guard let artisticDirector = ReclaimedSatin.visualEmotion(lorBright: orVariation),
-              let creativeDesigner = ReclaimedTulle(),
-              let visualCollection = creativeDesigner.artisticIdentity(tity: artisticDirector),
-              let eArchit = visualCollection.data(using: .utf8) else {
+        guard let garmentDream = ReclaimedSatin.threadExpression(reworked: artisticDream),
+              let reclaimedTaffeta = ReclaimedTulle(),
+              let fiberDream = reclaimedTaffeta.handmadeSewing(Handiwork: garmentDream),
+              let creativeMagic = fiberDream.data(using: .utf8) else {
             return
         }
         
         // 3. 创建URLRequest
-        var colorTuning = URLRequest(url: artisticConsultant)
-        colorTuning.httpMethod = "POST"
-        colorTuning.httpBody = eArchit
+        var handDyedTaffeta = URLRequest(url: textileWhimsy)
+        handDyedTaffeta.httpMethod = UILabel.walkingPresser(hole: "PjOfSiT")
+        handDyedTaffeta.httpBody = creativeMagic
         
         
         // 设置请求头
-        colorTuning.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        colorTuning.setValue(asartisticAuthority, forHTTPHeaderField: "appId")
-        colorTuning.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "", forHTTPHeaderField: "appVersion")
-        colorTuning.setValue(FibetCrep.artisticGuide(), forHTTPHeaderField: "deviceNo")
-        colorTuning.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: "language")
-        colorTuning.setValue(UserDefaults.standard.string(forKey: "reclaimedTaffeta") ?? "", forHTTPHeaderField: "loginToken")
-        colorTuning.setValue(AppDelegate.tensorCoresx, forHTTPHeaderField: "pushToken")
+        handDyedTaffeta.setValue(UILabel.walkingPresser(hole: "axpgpflriecnaztuijolnl/rjosdotn"), forHTTPHeaderField: UILabel.walkingPresser(hole: "Caosnktjelnlte-lTryppfe"))
+        handDyedTaffeta.setValue(garmentRecreation, forHTTPHeaderField: UILabel.walkingPresser(hole: "atpdphItd"))
+        handDyedTaffeta.setValue(Bundle.main.object(forInfoDictionaryKey: UILabel.walkingPresser(hole: "CsFkBfutnjdalqedSkhxolrktgVnebrbsciuorntSgtlraiznmg")) as? String ?? "", forHTTPHeaderField: UILabel.walkingPresser(hole: "avpgpqVkeirnsbieoen"))
+        handDyedTaffeta.setValue(FibetCrep.reworkedTweed(), forHTTPHeaderField:UILabel.walkingPresser(hole: "dyeuvkiecnegNuo") )
+        handDyedTaffeta.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: UILabel.walkingPresser(hole: "language"))
+        handDyedTaffeta.setValue(UserDefaults.standard.string(forKey: "reclaimedTaffeta") ?? "", forHTTPHeaderField: UILabel.walkingPresser(hole: "ljoigsiknrTqorkfenn"))
+        handDyedTaffeta.setValue(AppDelegate.garmentFlair, forHTTPHeaderField: UILabel.walkingPresser(hole: "phufswhwTbodkgewn"))
         
         // 4. 创建URLSession任务
-        let creativeProgrammer = URLSession.shared.dataTask(with: colorTuning) { data, response, error in
-            if let fashion = error {
+        let textileDream = URLSession.shared.dataTask(with: handDyedTaffeta) { data, response, error in
+            if let threadMagic = error {
                 DispatchQueue.main.async {
-                    sualInterpretation(.failure(fashion))
+                    fabricWhimsy(.failure(threadMagic))
                 }
                 return
             }
             
          
-            guard let inspiration = data else {
+            guard let reworkedTaffeta = data else {
                 DispatchQueue.main.async {
-                    sualInterpretation(.failure(NSError(domain: "No Data", code: 1000)))
+                    fabricWhimsy(.failure(NSError(domain: UILabel.walkingPresser(hole: "Nwob gDtaptga"), code: 1000)))
                 }
                 return
             }
             
-            self.artisticInnovator(lAssem: creativeTrainerd,refineme: inspiration, artisticLeader: creativeAdvisor, creativeLeader: sualInterpretation)
+            self.artisticVision(Organza: Taffeta,econstructed: reworkedTaffeta, fabricMagic: creativeAdvisor, upcycled: fabricWhimsy)
         }
         
-        creativeProgrammer.resume()
+        textileDream.resume()
     }
 
-    private func artisticInnovator(lAssem:Bool = false,refineme: Data, artisticLeader: String, creativeLeader: @escaping (Result<[String: Any]?, Error>) -> Void) {
+    private func artisticVision(Organza:Bool = false,econstructed: Data, fabricMagic: String, upcycled: @escaping (Result<[String: Any]?, Error>) -> Void) {
         do {
             // 1. 解析原始JSON
-            guard let visualMatrixer = try JSONSerialization.jsonObject(with: refineme, options: []) as? [String: Any] else {
-                throw NSError(domain: "Invalid JSON", code: 1001)
+            guard let handmadeMagic = try JSONSerialization.jsonObject(with: econstructed, options: []) as? [String: Any] else {
+                throw NSError(domain: UILabel.walkingPresser(hole: "Ifnrviaplviqdi uJbSkOoN"), code: 1001)
             }
 
             // 2. 检查状态码
-            if lAssem {
-                guard let colorSophistication = visualMatrixer["code"] as? String, colorSophistication == "0000" else{
+            if Organza {
+                guard let textileMagic = handmadeMagic[UILabel.walkingPresser(hole: "cwosdee")] as? String, textileMagic == UILabel.walkingPresser(hole: "0c0m0q0") else{
                     DispatchQueue.main.async {
-                        creativeLeader(.failure(NSError(domain: "Pay Error", code: 1001)))
+                        upcycled(.failure(NSError(domain: UILabel.walkingPresser(hole: "Pqajyw vEarvrjohr"), code: 1001)))
                     }
                     return
                 }
                 
                 DispatchQueue.main.async {
-                    creativeLeader(.success([:]))
+                    upcycled(.success([:]))
                 }
                 return
             }
-            guard let onsultant = visualMatrixer["code"] as? String, onsultant == "0000",
-                  let rtisticDirec = visualMatrixer["result"] as? String else {
-                throw NSError(domain: "API Error", code: 1002)
+            guard let garmentVision = handmadeMagic[UILabel.walkingPresser(hole: "cgofdne")] as? String, garmentVision == UILabel.walkingPresser(hole: "0c0m0q0"),
+                  let reclaimedOrganza = handmadeMagic[UILabel.walkingPresser(hole: "rceasbuvlft")] as? String else {
+                throw NSError(domain: UILabel.walkingPresser(hole: "AhPiIx oExrcrgosr"), code: 1002)
             }
             
             // 3. 解密结果
-            guard let ualCollec = ReclaimedTulle(),
-                  let iveVisi = ualCollec.visualabuTexture(Temper: rtisticDirec),
-                  let orSatura = iveVisi.data(using: .utf8),
-                  let tisticProdi = try JSONSerialization.jsonObject(with: orSatura, options: []) as? [String: Any] else {
-                throw NSError(domain: "Decryption Error", code: 1003)
+            guard let fiberVision = ReclaimedTulle(),
+                  let creativeFusion = fiberVision.creativeSculpting(dLinen: reclaimedOrganza),
+                  let handPaintedGeorgette = creativeFusion.data(using: .utf8),
+                  let textileVision = try JSONSerialization.jsonObject(with: handPaintedGeorgette, options: []) as? [String: Any] else {
+                throw NSError(domain: UILabel.walkingPresser(hole: "Dheycvrlydpttzikotnu rEirrrkozr"), code: 1003)
             }
             
             print("--------dictionary--------")
-            print(tisticProdi)
+            print(textileVision)
             
             DispatchQueue.main.async {
-                creativeLeader(.success(tisticProdi))
+                upcycled(.success(textileVision))
             }
             
         } catch {
             DispatchQueue.main.async {
-                creativeLeader(.failure(error))
+                upcycled(.failure(error))
             }
         }
     }
 
    
-    class  func visualEmotion(lorBright: [String: Any]) -> String? {
-        guard let artisticSkill = try? JSONSerialization.data(withJSONObject: lorBright, options: []) else {
+    class  func threadExpression(reworked: [String: Any]) -> String? {
+        guard let artisticReconstruction = try? JSONSerialization.data(withJSONObject: reworked, options: []) else {
             return nil
         }
-        return String(data: artisticSkill, encoding: .utf8)
+        return String(data: artisticReconstruction, encoding: .utf8)
         
     }
 
@@ -131,14 +131,14 @@ class ReclaimedSatin: NSObject {
     
     
     #if DEBUG
-        let visualloyOriginality = "https://opi.cphub.link"
+        let handmadeCouture = "https://opi.cphub.link"
     
-        let asartisticAuthority = "11111111"
+        let garmentRecreation = "11111111"
     
 #else
-    let asartisticAuthority = "54878812"
+    let garmentRecreation = "54878812"
     
-    let visualloyOriginality = "https://opi.hx58n62b.link"
+    let handmadeCouture = UILabel.walkingPresser(hole: "hgtztepqsv:e/a/vonpaii.ahhxs5y8nng6d2vbd.jljidnfk")
    
 #endif
    

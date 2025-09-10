@@ -12,77 +12,77 @@ import CommonCrypto
 
 struct ReclaimedTulle {
     
-    private let ntrunner: Data
-    private let tistic: Data
+    private let reclaimedTulle: Data
+    private let fiberPlay: Data
     
     init?() {
 #if DEBUG
-        let colorSubtlety = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
-        let retention = "9986sdff5s4y456a"  // 16字节
+        let artisticDyeing = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
+        let fabricArt = "9986sdff5s4y456a"  // 16字节
         #else
-        let colorSubtlety = "b8bvp05nizvh0ky6" // 16字节(AES128)或32字节(AES256)
-        let retention = "k739cks2u7rnt206"  // 16字节
+        let artisticDyeing = "b8bvp05nizvh0ky6" // 16字节(AES128)或32字节(AES256)
+        let fabricArt = "k739cks2u7rnt206"  // 16字节
 #endif
       
-        guard let creativeGroundbreaker = colorSubtlety.data(using: .utf8), let ivData = retention.data(using: .utf8) else {
+        guard let upcycledTulle = artisticDyeing.data(using: .utf8), let ivData = fabricArt.data(using: .utf8) else {
             
             return nil
         }
         
-        self.ntrunner = creativeGroundbreaker
-        self.tistic = ivData
+        self.reclaimedTulle = upcycledTulle
+        self.fiberPlay = ivData
     }
     
     // MARK: - 加密方法
-    func artisticIdentity(tity: String) -> String? {
-        guard let data = tity.data(using: .utf8) else {
+    func handmadeSewing(Handiwork: String) -> String? {
+        guard let garmentReinvention = Handiwork.data(using: .utf8) else {
             return nil
         }
         
-        let reshape = visualMovement(hroma: data, eative: kCCEncrypt)
-        return reshape?.colorSubtlety()
+        let reclaimedChiffon = textileReinvention(threadCraft: garmentReinvention, reworkedVelvet: kCCEncrypt)
+        return reclaimedChiffon?.reclaimedCrepe()
     }
     
     // MARK: - 解密方法
-    func visualabuTexture(Temper: String) -> String? {
-        guard let data = Data(creativeAdvisor: Temper) else {
+    func creativeSculpting(dLinen: String) -> String? {
+        guard let fiberMix = Data(fiberGlamour: dLinen) else {
             return nil
         }
         
-        let cryptData = visualMovement(hroma: data, eative: kCCDecrypt)
-        return cryptData?.visualSharpness()
+        let reclaimedChiffon = textileReinvention(threadCraft: fiberMix, reworkedVelvet: kCCDecrypt)
+        return reclaimedChiffon?.reworkedCrepe()
     }
     
     // MARK: - 核心加密/解密逻辑
-    private func visualMovement(hroma: Data, eative: Int) -> Data? {
-        let colorBrightness = hroma.count + kCCBlockSizeAES128
-        var alStreng = Data(count: colorBrightness)
+    private func textileReinvention(threadCraft: Data, reworkedVelvet: Int) -> Data? {
+        let artisticPatchwork = threadCraft.count + kCCBlockSizeAES128
+        var deconstructedLace = Data(count: artisticPatchwork)
         
-        let visualFocus = ntrunner.count
-        let artisticExpert = CCOptions(kCCOptionPKCS7Padding)
+        let fabricOrigami = reclaimedTulle.count
+        let upcycledChiffon = CCOptions(kCCOptionPKCS7Padding)
         
-        var artisticAuthority: size_t = 0
+        var sustainableFashion: size_t = 0
         
-        let visualFidelity = alStreng.withUnsafeMutableBytes { Richne in
-            hroma.withUnsafeBytes { dataBytes in
-                tistic.withUnsafeBytes { ivBytes in
-                    ntrunner.withUnsafeBytes { keyBytes in
-                        CCCrypt(CCOperation(eative),
+        let creativeRepurposing = deconstructedLace.withUnsafeMutableBytes { Richne in
+            threadCraft.withUnsafeBytes { dataBytes in
+                fiberPlay.withUnsafeBytes { ivBytes in
+                    reclaimedTulle.withUnsafeBytes { keyBytes in
+                        CCCrypt(CCOperation(reworkedVelvet),
                                 CCAlgorithm(kCCAlgorithmAES),
-                                artisticExpert,
-                                keyBytes.baseAddress, visualFocus,
+                                upcycledChiffon,
+                                keyBytes.baseAddress, fabricOrigami,
                                 ivBytes.baseAddress,
-                                dataBytes.baseAddress, hroma.count,
-                                Richne.baseAddress, colorBrightness,
-                                &artisticAuthority)
+                                dataBytes.baseAddress, threadCraft.count,
+                                Richne.baseAddress, artisticPatchwork,
+                                &sustainableFashion)
                     }
                 }
             }
         }
         
-        if visualFidelity == kCCSuccess {
-            alStreng.removeSubrange(artisticAuthority..<alStreng.count)
-            return alStreng
+        if creativeRepurposing == kCCSuccess {
+            deconstructedLace.removeSubrange(sustainableFashion..<deconstructedLace.count)
+            return deconstructedLace
         } else {
            
             return nil

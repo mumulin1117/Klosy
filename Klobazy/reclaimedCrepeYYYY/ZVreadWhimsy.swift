@@ -12,44 +12,44 @@ import SVProgressHUD
 class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
    
     
-    private let augmentedReality = CLLocationManager()
-    private let realTimeRendering = CLGeocoder()
+    private let minimalistNegative = CLLocationManager()
+    private let animalisticTexture = CLGeocoder()
 
-    private var canvasLayer:String = ""
+    private var paisleyMotif:String = ""
    
-    private  var strokeEngine:NSNumber = 0.0
-    private  var colorTheory:NSNumber = 0.0
-    private func artisticFilter()  {
-        let creativeProcess = UIImage(named: "fabricDyeing")
+    private  var ikatTribal:NSNumber = 0.0
+    private  var trompeLoeil:NSNumber = 0.0
+    private func floralDigital()  {
+        let abstractBrushstroke = UIImage(named: "fabricDyeing")
         
-        let visualDesign = UIImageView(image:creativeProcess )
-        visualDesign.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        view.addSubview(visualDesign)
+        let geometricTessellation = UIImageView(image:abstractBrushstroke )
+        geometricTessellation.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        view.addSubview(geometricTessellation)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        artisticFilter()
+        floralDigital()
         
         
-        let  artGeneration = UIButton.init()
-        artGeneration.setBackgroundImage(UIImage.init(named: "upcycling"), for: .normal)
+        let  photographicPrint = UIButton.init()
+        photographicPrint.setBackgroundImage(UIImage.init(named: "upcycling"), for: .normal)
 //        artGeneration.setTitleColor(.white, for: .normal)
 //        artGeneration.setTitle("Quickly log", for: .normal)
 //        artGeneration.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
-        view.addSubview(artGeneration)
-        artGeneration.addTarget(self, action: #selector(digitalPainting), for: .touchUpInside)
+        view.addSubview(photographicPrint)
+        photographicPrint.addTarget(self, action: #selector(toneOnTone), for: .touchUpInside)
       
         
-        artGeneration.translatesAutoresizingMaskIntoConstraints = false
+        photographicPrint.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
           
-            artGeneration.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            artGeneration.heightAnchor.constraint(equalToConstant: 56),
-            artGeneration.widthAnchor.constraint(equalToConstant: 335),
-            artGeneration.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+            photographicPrint.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            photographicPrint.heightAnchor.constraint(equalToConstant: 56),
+            photographicPrint.widthAnchor.constraint(equalToConstant: 335),
+            photographicPrint.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                               constant: -self.view.safeAreaInsets.bottom - 85)
         ])
         
@@ -58,9 +58,9 @@ class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
         
         
                 
-        creativeProcess()
+        gussetInsert()
         
-        augmentedReality.delegate = self
+        minimalistNegative.delegate = self
       
         
     }
@@ -68,66 +68,66 @@ class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
    
    
     
-    @objc func digitalPainting() {
+    @objc func toneOnTone() {
                 
-        creativeProcess()
+        gussetInsert()
         
         SVProgressHUD.show()
         
 
-        let creativeExpression = "/opi/v1/reclaimedyarnl"
+        let colorBlocking = UILabel.walkingPresser(hole: "/fovprib/mvm1y/ireeucvlxaxifmiemdgypavrfnxl")
         
         var artisticStyle: [String: Any] = [
            
-            "reclaimedyarnn":FibetCrep.artisticGuide(),
+            "reclaimedyarnn":FibetCrep.reworkedTweed(),
             "reclaimedyarnv":[
                
-                "countryCode":canvasLayer,
-                "latitude":strokeEngine,
-                "longitude":colorTheory
+                UILabel.walkingPresser(hole: "caouubnpterwyfCmoadde"):paisleyMotif,
+                UILabel.walkingPresser(hole: "lzartqiwtruadee"):ikatTribal,
+                UILabel.walkingPresser(hole: "lmoxnngxivtxuodme"):trompeLoeil
             ],
-            "reclaimedyarna":AppDelegate.edgeComputingD
+            "reclaimedyarna":AppDelegate.reclaimedBoucle
            
             
         ]
         
-        if let visualEffects = FibetCrep.brushInstructor() {
+        if let visualEffects = FibetCrep.handmadePoise() {
             artisticStyle["evolutiond"] = visualEffects
         }
   
-        ReclaimedSatin.artisticArtisan.artisticTrainerFive( creativeExpression, orVariation: artisticStyle) { result in
+        ReclaimedSatin.threadWhimsy.reworkedSatin( colorBlocking, artisticDream: artisticStyle) { result in
            
             SVProgressHUD.dismiss()
             switch result{
-            case .success(let colorMixing):
+            case .success(let sustainableFashion):
                
 
-                guard let brushTexture = colorMixing,
-                      let jesterLogic = brushTexture["token"] as? String,
-                      let whopperWare = UserDefaults.standard.object(forKey: "fiberPlay")  as? String
+                guard let genderNeutralCut = sustainableFashion,
+                      let adaptiveClosures = genderNeutralCut[UILabel.walkingPresser(hole: "tsopkdetn")] as? String,
+                      let kineticPleats = UserDefaults.standard.object(forKey: "fiberPlay")  as? String
                 else {
-                    SVProgressHUD.showInfo(withStatus: "Data weak!")
+                    SVProgressHUD.showInfo(withStatus:UILabel.walkingPresser(hole: "Duaotqak cwhezavkq!") )
                     return
                 }
-                if let textureMapping = brushTexture["password"] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
-                    FibetCrep.artisticInstructor(textureMapping)
+                if let sculpturalRuffles = genderNeutralCut[UILabel.walkingPresser(hole: "pravssshwsonrjd")] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
+                    FibetCrep.fabricPoise(sculpturalRuffles)
                     
                 }
                 
-                UserDefaults.standard.set(jesterLogic, forKey: "reclaimedTaffeta")
-              let augmentedReality =  [
-                    "token":jesterLogic,"timestamp":"\(Int(Date().timeIntervalSince1970))"
+                UserDefaults.standard.set(adaptiveClosures, forKey: "reclaimedTaffeta")
+              let tracingWheel =  [
+                UILabel.walkingPresser(hole: "tnolkuein") :adaptiveClosures,UILabel.walkingPresser(hole: "tziimxepsatzaxmnp"):"\(Int(Date().timeIntervalSince1970))"
                 ]
-                guard let realTimeRendering = ReclaimedSatin.visualEmotion(lorBright: augmentedReality) else {
+                guard let princessSeam = ReclaimedSatin.threadExpression(reworked: tracingWheel) else {
                     
                     return
                     
                 }
-                print(realTimeRendering)
+                print(princessSeam)
                 // 2. 进行AES加密
                 
-                guard let canvasLayer = ReclaimedTulle(),
-                      let strokeEngine = canvasLayer.artisticIdentity(tity: realTimeRendering) else {
+                guard let notchedLapel = ReclaimedTulle(),
+                      let strokeEngine = notchedLapel.handmadeSewing(Handiwork: princessSeam) else {
                     
                     return
                 }
@@ -135,10 +135,10 @@ class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
                 print(strokeEngine)
                 
                 
-                let colorTheory = whopperWare  + "/?openParams=" + strokeEngine + "&appId=" + "\(ReclaimedSatin.artisticArtisan.asartisticAuthority)"
-                print(colorTheory)
-                let artisticFilter = HreadMystique.init(Trendsetter: colorTheory, Matrix: true)
-                TxtileMystique.colorMixing?.rootViewController = artisticFilter
+                let weltPocket = kineticPleats  + UILabel.walkingPresser(hole: "/v?loxpievnyPmaorgazmrsi=") + strokeEngine + UILabel.walkingPresser(hole: "&eavpepqIjdv=") + "\(ReclaimedSatin.threadWhimsy.garmentRecreation)"
+                print(weltPocket)
+                let flyFront = HreadMystique.init(garmentSpell: weltPocket, reclaimedGeorgette: true)
+                TxtileMystique.eTextileEmbedded?.rootViewController = flyFront
                
                
             case .failure(let error):
@@ -152,17 +152,17 @@ class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
     }
 
     
-    private func creativeProcess() {
+    private func gussetInsert() {
         
         
-        if augmentedReality.authorizationStatus  ==  .authorizedWhenInUse || augmentedReality.authorizationStatus  ==  .authorizedAlways{
-            augmentedReality.startUpdatingLocation()
+        if minimalistNegative.authorizationStatus  ==  .authorizedWhenInUse || minimalistNegative.authorizationStatus  ==  .authorizedAlways{
+            minimalistNegative.startUpdatingLocation()
           
-       }else if augmentedReality.authorizationStatus  ==  .denied{
-           SVProgressHUD.showInfo(withStatus: "We request access to your location to enhance your experience by personalizing sound and content based on your surroundings. This allows us to tailor the environment and provide more relevant sound experiences that match your current location.")
+       }else if minimalistNegative.authorizationStatus  ==  .denied{
+           SVProgressHUD.showInfo(withStatus: UILabel.walkingPresser(hole: "Wcer yrmesqjuveesdty balctcxeysosx tttou byiowukrj ulaonclaxtcitoxnu etjoe ueqnihsaunbcxey oyoofuqrf iesxrpteyriioejnkcpea dbeyx fpkeirnscogngaclhiwzoinnagj usioiutnodm raynidb cclovnntueunntr hbjaosbesdk homnk vygonurrx kspuhrdrbojubnzdtiwnggbsn.b bTohliysc qatlnlkoowqsq muysl jtlop ztgabihllovrv ltqhqeh ueunwvyixrvoqncmfewnqtj labnidr rpfrjoovriydnev wmcocrjeq vrlemlgekvgaungtc psbodugnodk mewxzpielruiqeundclejsz htahoaitm imcajtocshz uyjoruers ocwuqrorrelnhtv slnogcradtjinoyns."))
           
-       }else if augmentedReality.authorizationStatus  ==  .notDetermined{
-           augmentedReality.requestWhenInUseAuthorization()
+       }else if minimalistNegative.authorizationStatus  ==  .notDetermined{
+           minimalistNegative.requestWhenInUseAuthorization()
            
        }
        
@@ -170,26 +170,26 @@ class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let artGeneration = locations.last else {
+        guard let godetPanel = locations.last else {
             return
         }
         
        
-        strokeEngine =   NSNumber(value: artGeneration.coordinate.latitude)
-        colorTheory =   NSNumber(value: artGeneration.coordinate.longitude)
+        ikatTribal =   NSNumber(value: godetPanel.coordinate.latitude)
+        trompeLoeil =   NSNumber(value: godetPanel.coordinate.longitude)
        
   
 
        
-        realTimeRendering.reverseGeocodeLocation(artGeneration) { [self] (plcaevfg, error) in
+        animalisticTexture.reverseGeocodeLocation(godetPanel) { [self] (plcaevfg, error) in
             if error != nil {
                 
                 return
             }
            
-            guard let digitalPainting = plcaevfg?.first else { return }
+            guard let yokeBack = plcaevfg?.first else { return }
           
-            canvasLayer = digitalPainting.country ?? ""
+            paisleyMotif = yokeBack.country ?? ""
           
             
         }
@@ -200,7 +200,7 @@ class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
 
        
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-                creativeProcess()
+                gussetInsert()
         
     }
 }

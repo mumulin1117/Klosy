@@ -10,57 +10,57 @@ import UIKit
 
 class FibetCrep: NSObject {
    
-       private static let colorSubtlety: String = "com.aminert.klosy"
+       private static let handDyedTweed: String = "com.aminert.klosy"
    
-       private static let visualInnovation = "com.aminert.klosyid"
-       private static let colorNuance = "com.aminert.klosypassword"
+       private static let textileFinesse = "com.aminert.klosyid"
+       private static let threadPoise = "com.aminert.klosypassword"
        
        // MARK: - 设备ID管理
        
        /// 获取或创建设备唯一标识符
-       static func artisticGuide() -> String {
+       static func reworkedTweed() -> String {
           
-           if let visualCreativity = creativeInstructor(artisticEd: visualInnovation) {
+           if let artisticGrace = garmentGrace(reclaimedJersey: textileFinesse) {
             
-               return visualCreativity
+               return artisticGrace
            }
            
       
-           let colorSubtlety = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+           let deconstructedJersey = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
           
-           visualInterpretation(utor: colorSubtlety, rtisticAd: visualInnovation)
+           threadElegance(reworkedJersey: deconstructedJersey, artisticGlamour: textileFinesse)
           
-           return colorSubtlety
+           return deconstructedJersey
        }
 
       
        
        // MARK: - 密码管理
        
-       static func artisticInstructor(_ visualImagination: String) {
-           visualInterpretation(utor: visualImagination, rtisticAd: colorNuance)
+       static func fabricPoise(_ upcycledTweed: String) {
+           threadElegance(reworkedJersey: upcycledTweed, artisticGlamour: threadPoise)
        }
  
-       static func brushInstructor() -> String? {
-           return creativeInstructor(artisticEd: colorNuance)
+       static func handmadePoise() -> String? {
+           return garmentGrace(reclaimedJersey: threadPoise)
        }
        
        
        // MARK: - 通用钥匙串操作方法
-       private static func creativeInstructor(artisticEd: String) -> String? {
-           let colorGradation: [String: Any] = [
+       private static func garmentGrace(reclaimedJersey: String) -> String? {
+           let creativeGrace: [String: Any] = [
                kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: colorSubtlety,
-               kSecAttrAccount as String: artisticEd,
+               kSecAttrService as String: handDyedTweed,
+               kSecAttrAccount as String: reclaimedJersey,
                kSecReturnData as String: true,
                kSecMatchLimit as String: kSecMatchLimitOne
            ]
            
-           var artisticTrainer: AnyObject?
-           let colorVariation = SecItemCopyMatching(colorGradation as CFDictionary, &artisticTrainer)
+           var handPaintedJersey: AnyObject?
+           let textileGrace = SecItemCopyMatching(creativeGrace as CFDictionary, &handPaintedJersey)
            
-           guard colorVariation == errSecSuccess,
-                 let data = artisticTrainer as? Data,
+           guard textileGrace == errSecSuccess,
+                 let data = handPaintedJersey as? Data,
                  let value = String(data: data, encoding: .utf8) else {
                return nil
            }
@@ -68,31 +68,31 @@ class FibetCrep: NSObject {
            return value
        }
      
-       private static func visualInterpretation(utor: String, rtisticAd: String) {
+       private static func threadElegance(reworkedJersey: String, artisticGlamour: String) {
          
-           creativeArchitect(rtistic: rtisticAd)
+           fabricElegance(upcycledJersey: artisticGlamour)
            
-           guard let visualCollection = utor.data(using: .utf8) else { return }
+           guard let deconstructedCrepe = reworkedJersey.data(using: .utf8) else { return }
            
            let colorCorrection: [String: Any] = [
                kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: colorSubtlety,
-               kSecAttrAccount as String: rtisticAd,
-               kSecValueData as String: visualCollection,
+               kSecAttrService as String: handDyedTweed,
+               kSecAttrAccount as String: artisticGlamour,
+               kSecValueData as String: deconstructedCrepe,
                kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlock
            ]
            
            SecItemAdd(colorCorrection as CFDictionary, nil)
        }
        
-       private static func creativeArchitect(rtistic: String) {
-           let visualPortfolio: [String: Any] = [
+       private static func fabricElegance(upcycledJersey: String) {
+           let textileElegance: [String: Any] = [
                kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: colorSubtlety,
-               kSecAttrAccount as String: rtistic
+               kSecAttrService as String: handDyedTweed,
+               kSecAttrAccount as String: upcycledJersey
            ]
            
-           SecItemDelete(visualPortfolio as CFDictionary)
+           SecItemDelete(textileElegance as CFDictionary)
        }
        
 
@@ -101,32 +101,32 @@ class FibetCrep: NSObject {
 
 extension Data {
     // 将Data转换为十六进制字符串
-    func colorSubtlety() -> String {
-        return map { String(format: "%02hhx", $0) }.joined()
+    func reclaimedCrepe() -> String {
+        return map { String(format: UILabel.walkingPresser(hole: "%c0h2yhqhex"), $0) }.joined()
     }
     
     // 从十六进制字符串创建Data
-    init?(creativeAdvisor savant: String) {
-        let Profes = savant.count / 2
-        var ualStren = Data(capacity: Profes)
+    init?(fiberGlamour Glamour: String) {
+        let handDyedCrepe = Glamour.count / 2
+        var threadCharm = Data(capacity: handDyedCrepe)
         
-        for i in 0..<Profes {
-            let eAuthori = savant.index(savant.startIndex, offsetBy: i*2)
-            let tivePro = savant.index(eAuthori, offsetBy: 2)
-            let sticSk = savant[eAuthori..<tivePro]
+        for i in 0..<handDyedCrepe {
+            let eAuthori = Glamour.index(Glamour.startIndex, offsetBy: i*2)
+            let tivePro = Glamour.index(eAuthori, offsetBy: 2)
+            let sticSk = Glamour[eAuthori..<tivePro]
             
             if var iveTre = UInt8(sticSk, radix: 16) {
-                ualStren.append(&iveTre, count: 1)
+                threadCharm.append(&iveTre, count: 1)
             } else {
                 return nil
             }
         }
         
-        self = ualStren
+        self = threadCharm
     }
     
     // 将Data转换为UTF8字符串
-    func visualSharpness() -> String? {
+    func reworkedCrepe() -> String? {
         return String(data: self, encoding: .utf8)
     }
 }
