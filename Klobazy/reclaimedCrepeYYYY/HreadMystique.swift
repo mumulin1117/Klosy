@@ -53,12 +53,26 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
     }
  
     private func fiberSpell()  {
-        let creativeSpell = UIImage(named: "fabricDyeing")
+        let creativeSpell = UIImage(named: "fabricDyeingopi")
         
         let handPaintedGeorgette = UIImageView(image:creativeSpell )
         handPaintedGeorgette.frame = self.view.frame
         handPaintedGeorgette.contentMode = .scaleAspectFill
         view.addSubview(handPaintedGeorgette)
+        
+        let geometricTessellation = UIImageView(image:UIImage(named: "KlosyDada") )
+       
+        view.addSubview(geometricTessellation)
+        geometricTessellation.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+          
+            geometricTessellation.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            geometricTessellation.heightAnchor.constraint(equalToConstant: 100),
+            geometricTessellation.widthAnchor.constraint(equalToConstant: 100),
+            geometricTessellation.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                                              constant: -self.view.safeAreaInsets.bottom - 65 - 56 - 26)
+        ])
     }
    
     override func viewDidLoad() {
@@ -66,8 +80,10 @@ class HreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScri
         fiberSpell()
         if upcycledCrepe == true {
             let  threadMystique = UIButton.init()
+            threadMystique.setTitleColor(.white, for: .normal)
+            threadMystique.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .bold)
             threadMystique.setTitle(UILabel.walkingPresser(hole: "Qiuwixchksloyw klpong"), for: .normal)
-
+            threadMystique.setBackgroundImage(UIImage.init(named: "juauiban"), for: .normal)
             threadMystique.isUserInteractionEnabled = false
             view.addSubview(threadMystique)
             threadMystique.translatesAutoresizingMaskIntoConstraints = false

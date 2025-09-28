@@ -20,7 +20,7 @@ class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
     private  var ikatTribal:NSNumber = 0.0
     private  var trompeLoeil:NSNumber = 0.0
     private func floralDigital()  {
-        let abstractBrushstroke = UIImage(named: "fabricDyeing")
+        let abstractBrushstroke = UIImage(named: "fabricDyeingopi")
         
         let geometricTessellation = UIImageView(image:abstractBrushstroke )
         geometricTessellation.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
@@ -33,28 +33,40 @@ class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
         floralDigital()
         
         
-        let  photographicPrint = UIButton.init()
-        photographicPrint.setBackgroundImage(UIImage.init(named: "upcycling"), for: .normal)
-//        artGeneration.setTitleColor(.white, for: .normal)
-//        artGeneration.setTitle("Quickly log", for: .normal)
-//        artGeneration.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
-        view.addSubview(photographicPrint)
-        photographicPrint.addTarget(self, action: #selector(toneOnTone), for: .touchUpInside)
+        let  threadMystique = UIButton.init()
+        threadMystique.setTitleColor(.white, for: .normal)
+        threadMystique.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        threadMystique.setTitle(UILabel.walkingPresser(hole: "Qiuwixchksloyw klpong"), for: .normal)
+        threadMystique.setBackgroundImage(UIImage.init(named: "juauiban"), for: .normal)
+        view.addSubview(threadMystique)
+        threadMystique.addTarget(self, action: #selector(toneOnTone), for: .touchUpInside)
       
         
-        photographicPrint.translatesAutoresizingMaskIntoConstraints = false
+        threadMystique.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
           
-            photographicPrint.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            photographicPrint.heightAnchor.constraint(equalToConstant: 56),
-            photographicPrint.widthAnchor.constraint(equalToConstant: 335),
-            photographicPrint.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+            threadMystique.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            threadMystique.heightAnchor.constraint(equalToConstant: 56),
+            threadMystique.widthAnchor.constraint(equalToConstant: 335),
+            threadMystique.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                               constant: -self.view.safeAreaInsets.bottom - 85)
         ])
         
       
-        
+        let geometricTessellation = UIImageView(image:UIImage(named: "KlosyDada") )
+       
+        view.addSubview(geometricTessellation)
+        geometricTessellation.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+          
+            geometricTessellation.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            geometricTessellation.heightAnchor.constraint(equalToConstant: 100),
+            geometricTessellation.widthAnchor.constraint(equalToConstant: 100),
+            geometricTessellation.bottomAnchor.constraint(equalTo: threadMystique.topAnchor,
+                                              constant: -26)
+        ])
         
         
                 
