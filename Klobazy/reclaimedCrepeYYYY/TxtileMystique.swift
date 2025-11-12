@@ -71,9 +71,11 @@ class TxtileMystique: UIViewController {
         if self.conductiveStitching != .satisfied  {
           
             if self.designCritique <= 5 {
-                self.designCritique += 1
-                self.patternHack()
                
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+                    self.designCritique += 1
+                    self.patternHack()
+                }))
                 return
             }
             self.swatchExchange()

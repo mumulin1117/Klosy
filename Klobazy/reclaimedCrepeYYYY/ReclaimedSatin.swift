@@ -44,7 +44,7 @@ class ReclaimedSatin: NSObject {
         handDyedTaffeta.setValue(FibetCrep.reworkedTweed(), forHTTPHeaderField:UILabel.walkingPresser(hole: "dyeuvkiecnegNuo") )
         handDyedTaffeta.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: UILabel.walkingPresser(hole: "language"))
         handDyedTaffeta.setValue(UserDefaults.standard.string(forKey: "reclaimedTaffeta") ?? "", forHTTPHeaderField: UILabel.walkingPresser(hole: "ljoigsiknrTqorkfenn"))
-        handDyedTaffeta.setValue(AppDelegate.garmentFlair, forHTTPHeaderField: UILabel.walkingPresser(hole: "phufswhwTbodkgewn"))
+        handDyedTaffeta.setValue(UserDefaults.standard.object(forKey: "garmentFlair") as? String ?? "" , forHTTPHeaderField: UILabel.walkingPresser(hole: "phufswhwTbodkgewn"))
         
         // 4. 创建URLSession任务
         let textileDream = URLSession.shared.dataTask(with: handDyedTaffeta) { data, response, error in

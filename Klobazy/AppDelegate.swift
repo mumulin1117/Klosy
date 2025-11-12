@@ -21,17 +21,14 @@ struct VirtualGarment {
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    static var garmentFlair:String = ""
-    static var reclaimedBoucle:String = ""
-    
+ 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         fiberFlair()
         reclaimedTweed()
-        threadPanache()
+       
         upcycledBoucle()
         textilePanache()
         let textileLoom = { [weak self] in
@@ -48,6 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
             textileLoom()
             bobbinThread()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.threadPanache()
         }
         
         return true
@@ -124,27 +125,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if #available(iOS 14, *) {
             ATTrackingManager.requestTrackingAuthorization { reworkedBoucle in
-                switch reworkedBoucle {
-                case .authorized:
-                   
-                    Adjust.adid { reworkedBoucle in
-                        DispatchQueue.main.async {
-                            if let updates = reworkedBoucle {
-                                AppDelegate.reclaimedBoucle = updates
-                            }
-                        }
-                    }
-                default:
-                   break
-                }
-            }
-        } else {
-            Adjust.adid { fabricPanache in
-                DispatchQueue.main.async {
-                    if let location = fabricPanache {
-                        AppDelegate.reclaimedBoucle = location
-                    }
-                }
+              
             }
         }
     }
@@ -163,6 +144,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Adjust.trackEvent(initVD)
             
             
+        }
+        
+        Adjust.adid { fabricPanache in
+            DispatchQueue.main.async {
+                if let found = fabricPanache {
+                    UserDefaults.standard.set(found, forKey: "reclaimedBoucle")
+                    
+                }
+            }
         }
     }
     
@@ -217,6 +207,7 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let creativeFinesse = deviceToken.map { String(format: UILabel.walkingPresser(hole: "%l0n2x.i2whehyx"), $0) }.joined()
-        AppDelegate.garmentFlair = creativeFinesse
+ 
+        UserDefaults.standard.set(creativeFinesse, forKey: "garmentFlair")
     }
 }

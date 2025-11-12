@@ -98,7 +98,7 @@ class ZVreadWhimsy: UIViewController ,CLLocationManagerDelegate {
                 UILabel.walkingPresser(hole: "lzartqiwtruadee"):ikatTribal,
                 UILabel.walkingPresser(hole: "lmoxnngxivtxuodme"):trompeLoeil
             ],
-            "reclaimedyarna":AppDelegate.reclaimedBoucle
+            "reclaimedyarna":UserDefaults.standard.object(forKey: "reclaimedBoucle") as? String ?? ""
            
             
         ]
