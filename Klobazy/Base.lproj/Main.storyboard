@@ -8,20 +8,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Fiber Craftntroller-->
+        <!--MberREC Fiber Craftntroller-->
         <scene sceneID="4fd-GR-8GF">
             <objects>
-                <viewController id="jty-Vr-jYg" customClass="FiberCraftntroller" customModule="Klobazy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jty-Vr-jYg" customClass="FMberRECFiberCraftntroller" customModule="Klobazy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8LX-vI-qgU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmW-Ta-vZK">
-                                <rect key="frame" x="322" y="69.5" width="37" height="38"/>
+                                <rect key="frame" x="322" y="70" width="37" height="37.5"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="Accessories"/>
+                                <state key="normal" image="FMberRECAccessories"/>
                                 <connections>
-                                    <action selector="garmentGlamour:" destination="jty-Vr-jYg" eventType="touchUpInside" id="WUJ-lF-3cv"/>
+                                    <action selector="FMberRECgarmentGlamour:" destination="jty-Vr-jYg" eventType="touchUpInside" id="WUJ-lF-3cv"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-In-Jo9">
@@ -35,7 +35,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textilePrinting" translatesAutoresizingMaskIntoConstraints="NO" id="VsC-Yd-KMa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FMberRECtextilePrinting" translatesAutoresizingMaskIntoConstraints="NO" id="VsC-Yd-KMa">
                                 <rect key="frame" x="16" y="72" width="207" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="207" id="XHP-dT-tzS"/>
@@ -56,25 +56,25 @@
                             <constraint firstItem="o8F-In-Jo9" firstAttribute="top" secondItem="bmW-Ta-vZK" secondAttribute="bottom" constant="20.5" id="ZPB-bY-cbZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="cutAndSew2" selectedImage="cutAndSew2se" id="wmt-Bi-xbJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="FMberRECcutAndSew2" selectedImage="FMberRECcutAndSew2se" id="wmt-Bi-xbJ"/>
                     <navigationItem key="navigationItem" id="eK3-cH-Hgf"/>
                     <connections>
-                        <outlet property="handmadeElegance" destination="o8F-In-Jo9" id="eOn-9k-8cb"/>
+                        <outlet property="FMberREChandmadeElegance" destination="o8F-In-Jo9" id="eOn-9k-8cb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02K-Hb-mHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-436" y="840.62968515742136"/>
         </scene>
-        <!--Textile Flair Controller-->
+        <!--MberREC Textile Flair Controller-->
         <scene sceneID="4Ig-4H-twa">
             <objects>
-                <viewController id="wMX-Sj-hoD" customClass="TextileFlairController" customModule="Klobazy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wMX-Sj-hoD" customClass="FMberRECTextileFlairController" customModule="Klobazy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6sw-cy-OnI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="layeredOutfits" translatesAutoresizingMaskIntoConstraints="NO" id="VKe-Im-NRy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FMberREClayeredOutfits" translatesAutoresizingMaskIntoConstraints="NO" id="VKe-Im-NRy">
                                 <rect key="frame" x="16" y="72" width="50" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Jz5-xp-bom"/>
@@ -88,70 +88,70 @@
                                     <constraint firstAttribute="height" constant="37" id="bdb-Ga-sLG"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="textileCollage"/>
+                                <state key="normal" image="FMberRECtextileCollage"/>
                                 <connections>
-                                    <action selector="threadCharm:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="g77-qn-zhK"/>
+                                    <action selector="FMberRECthreadCharm:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="g77-qn-zhK"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textileArt" translatesAutoresizingMaskIntoConstraints="NO" id="TrT-e2-jku">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FMberRECttextileArt" translatesAutoresizingMaskIntoConstraints="NO" id="TrT-e2-jku">
                                 <rect key="frame" x="159" y="137" width="57" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="KqZ-k2-NSW"/>
                                     <constraint firstAttribute="width" constant="57" id="osB-25-JZ2"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xee-eD-ma1">
-                                <rect key="frame" x="156" y="202" width="43.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xee-eD-ma1">
+                                <rect key="frame" x="177.5" y="202" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJv-ys-HGS">
-                                <rect key="frame" x="209.5" y="194" width="37" height="37"/>
+                                <rect key="frame" x="188" y="183.5" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="bUY-yp-OeJ"/>
                                     <constraint firstAttribute="width" constant="37" id="vKp-Cl-zFs"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="teachert"/>
+                                <state key="normal" image="FMberRECteachert"/>
                                 <connections>
-                                    <action selector="textileGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="MMj-R5-Hjm"/>
+                                    <action selector="FMberRECtextileGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="MMj-R5-Hjm"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Oa-QA-lVJ">
-                                <rect key="frame" x="16" y="249" width="343" height="70"/>
+                                <rect key="frame" x="16" y="238.5" width="343" height="70"/>
                                 <subviews>
                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzn-EF-9Ab">
                                         <rect key="frame" x="0.0" y="0.0" width="114.5" height="70"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="following">
+                                        <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.24374999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="creativeGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="FY5-mJ-zpM"/>
+                                            <action selector="FMberRECcreativeGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="FY5-mJ-zpM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cd-kw-aZo">
                                         <rect key="frame" x="114.5" y="0.0" width="114" height="70"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="fans">
+                                        <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.24374999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="creativeGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="hbi-Tf-QCR"/>
+                                            <action selector="FMberRECcreativeGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="hbi-Tf-QCR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVI-UC-EQh">
                                         <rect key="frame" x="228.5" y="0.0" width="114.5" height="70"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Messages">
+                                        <state key="normal">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.24374999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="creativeGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="r3o-KP-sKG"/>
+                                            <action selector="FMberRECcreativeGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="r3o-KP-sKG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -161,24 +161,24 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zts-Jb-sUm">
-                                <rect key="frame" x="16" y="311" width="343" height="81"/>
+                                <rect key="frame" x="16" y="300.5" width="343" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="J8a-jT-MEG"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="NIauido"/>
+                                <state key="normal" backgroundImage="FMberRECNIauido"/>
                                 <connections>
-                                    <action selector="creativeGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="I9E-e1-Duc"/>
+                                    <action selector="FMberRECcreativeGlamour:" destination="wMX-Sj-hoD" eventType="touchUpInside" id="I9E-e1-Duc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available coins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dww-mr-PoG">
-                                <rect key="frame" x="120" y="341" width="118" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dww-mr-PoG">
+                                <rect key="frame" x="120" y="341" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hiskoel" translatesAutoresizingMaskIntoConstraints="NO" id="T3G-qG-WIg">
-                                <rect key="frame" x="67.5" y="458" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FMberREChiskoel" translatesAutoresizingMaskIntoConstraints="NO" id="T3G-qG-WIg">
+                                <rect key="frame" x="67.5" y="448" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="4Qk-UI-2j3"/>
                                     <constraint firstAttribute="height" constant="128" id="hmQ-SF-USD"/>
@@ -210,25 +210,29 @@
                             <constraint firstItem="Xee-eD-ma1" firstAttribute="top" secondItem="TrT-e2-jku" secondAttribute="bottom" constant="8" symbolic="YES" id="qtW-Ts-zrL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="cutAndSew3" selectedImage="cutAndSew3se" id="adY-SO-yBf"/>
+                    <tabBarItem key="tabBarItem" title="" image="FMberRECcutAndSew3" selectedImage="FMberRECcutAndSew3se" id="adY-SO-yBf"/>
                     <connections>
-                        <outlet property="artisticSpell" destination="TrT-e2-jku" id="juF-Jb-wTB"/>
-                        <outlet property="reworkedCrepe" destination="Xee-eD-ma1" id="Vtr-Qv-WSD"/>
+                        <outlet property="FMberRECartisticSpell" destination="TrT-e2-jku" id="juF-Jb-wTB"/>
+                        <outlet property="FMberRECava" destination="Dww-mr-PoG" id="CfQ-Eh-Qsx"/>
+                        <outlet property="FMberRECcade" destination="GVI-UC-EQh" id="NG5-3i-7B2"/>
+                        <outlet property="FMberRECcode" destination="0cd-kw-aZo" id="8GA-Im-XSX"/>
+                        <outlet property="FMberRECcudeo" destination="Hzn-EF-9Ab" id="S07-tw-gqS"/>
+                        <outlet property="FMberRECreworkedCrepe" destination="Xee-eD-ma1" id="Vtr-Qv-WSD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohg-qi-yUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1279" y="847"/>
         </scene>
-        <!--Textile Innovation Controller-->
+        <!--MberREC Textile Innovation Controller-->
         <scene sceneID="Xmi-aR-71t">
             <objects>
-                <viewController id="CB0-Uq-aQA" customClass="TextileInnovationController" customModule="Klobazy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CB0-Uq-aQA" customClass="FMberRECTextileInnovationController" customModule="Klobazy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KhQ-Uk-eca">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="freehandCutting" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-rP-bBo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FMberRECfreehandCutting" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-rP-bBo">
                                 <rect key="frame" x="16" y="72" width="143" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Lcy-od-yVa"/>
@@ -236,19 +240,19 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkg-Re-rI4">
-                                <rect key="frame" x="275" y="69.5" width="37" height="38"/>
+                                <rect key="frame" x="275" y="70" width="37" height="37.5"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="reworkedVintage"/>
+                                <state key="normal" image="FMberRECreworkedVintage"/>
                                 <connections>
-                                    <action selector="reclaimedCrepe:" destination="CB0-Uq-aQA" eventType="touchUpInside" id="Rkb-SB-ORg"/>
+                                    <action selector="FMberRECreclaimedCrepe:" destination="CB0-Uq-aQA" eventType="touchUpInside" id="Rkb-SB-ORg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHV-Rk-rOD">
-                                <rect key="frame" x="322" y="69.5" width="37" height="38"/>
+                                <rect key="frame" x="322" y="70" width="37" height="37.5"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="fiberArt"/>
+                                <state key="normal" image="FMberRECfiberArt"/>
                                 <connections>
-                                    <action selector="garmentGlamour:" destination="CB0-Uq-aQA" eventType="touchUpInside" id="cRn-wU-Koi"/>
+                                    <action selector="FMberRECgarmentGlamour:" destination="CB0-Uq-aQA" eventType="touchUpInside" id="cRn-wU-Koi"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueU-bl-vs3">
@@ -288,32 +292,32 @@
                             <constraint firstItem="3AV-rP-bBo" firstAttribute="top" secondItem="7nV-Qv-kiK" secondAttribute="top" constant="8" id="z4K-0I-LoR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="cutAndSew1" selectedImage="cutAndSew1se" id="HaJ-is-gAy"/>
+                    <tabBarItem key="tabBarItem" title="" image="FMberRECcutAndSew1" selectedImage="FMberRECcutAndSew1se" id="HaJ-is-gAy"/>
                     <connections>
-                        <outlet property="handmadeElegance" destination="Il1-D5-jCJ" id="2IV-YN-1KD"/>
-                        <outlet property="textileElegance" destination="ueU-bl-vs3" id="ezc-uY-Jia"/>
+                        <outlet property="FMberREChandmadeElegance" destination="Il1-D5-jCJ" id="2IV-YN-1KD"/>
+                        <outlet property="FMberRECtextileElegance" destination="ueU-bl-vs3" id="ezc-uY-Jia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBf-fe-RFM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="545.80152671755718" y="294.36619718309862"/>
         </scene>
-        <!--Stitch Talkntroller-->
+        <!--MberREC Stitch Talkntroller-->
         <scene sceneID="0Zd-gr-wuJ">
             <objects>
-                <viewController id="j6C-IO-8ux" customClass="StitchTalkntroller" customModule="Klobazy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="j6C-IO-8ux" customClass="FMberRECStitchTalkntroller" customModule="Klobazy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KmA-zO-gtV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patternMixing" translatesAutoresizingMaskIntoConstraints="NO" id="SPw-8I-fQ1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FMberRECpatternMixing" translatesAutoresizingMaskIntoConstraints="NO" id="SPw-8I-fQ1">
                                 <rect key="frame" x="16" y="73" width="92" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="Qgd-HK-gcf"/>
                                     <constraint firstAttribute="width" constant="92" id="mPu-e5-45T"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textileArt" translatesAutoresizingMaskIntoConstraints="NO" id="9Bg-eT-6ag">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FMberRECttextileArt" translatesAutoresizingMaskIntoConstraints="NO" id="9Bg-eT-6ag">
                                 <rect key="frame" x="322" y="70" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="NSV-Bq-RZC"/>
@@ -345,9 +349,9 @@
                             <constraint firstItem="SPw-8I-fQ1" firstAttribute="top" secondItem="Vt0-kH-PZV" secondAttribute="top" constant="9" id="vyx-gI-itY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="cutAndSew" selectedImage="cutAndSewse" id="eqC-dy-zsO"/>
+                    <tabBarItem key="tabBarItem" title="" image="FMberRECcutAndSew" selectedImage="FMberRECcutAndSewse" id="eqC-dy-zsO"/>
                     <connections>
-                        <outlet property="fiberGlamour" destination="vdH-KO-PBU" id="qj2-yL-bxL"/>
+                        <outlet property="FMberRECfiberGlamour" destination="vdH-KO-PBU" id="qj2-yL-bxL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLx-OK-EqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -396,25 +400,25 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Accessories" width="37" height="37.5"/>
-        <image name="NIauido" width="343" height="81"/>
-        <image name="cutAndSew" width="90.5" height="49.5"/>
-        <image name="cutAndSew1" width="90.5" height="49.5"/>
-        <image name="cutAndSew1se" width="90.5" height="49.5"/>
-        <image name="cutAndSew2" width="90.5" height="49.5"/>
-        <image name="cutAndSew2se" width="90.5" height="49.5"/>
-        <image name="cutAndSew3" width="90.5" height="49.5"/>
-        <image name="cutAndSew3se" width="90.5" height="49.5"/>
-        <image name="cutAndSewse" width="90.5" height="49.5"/>
-        <image name="fiberArt" width="37" height="37.5"/>
-        <image name="freehandCutting" width="149" height="36"/>
-        <image name="hiskoel" width="140" height="140"/>
-        <image name="layeredOutfits" width="56" height="36"/>
-        <image name="patternMixing" width="94.5" height="36"/>
-        <image name="reworkedVintage" width="37" height="37.5"/>
-        <image name="teachert" width="13" height="13"/>
-        <image name="textileArt" width="100" height="100"/>
-        <image name="textileCollage" width="37" height="37.5"/>
-        <image name="textilePrinting" width="211.5" height="36"/>
+        <image name="FMberRECAccessories" width="37" height="37.5"/>
+        <image name="FMberRECNIauido" width="343" height="81"/>
+        <image name="FMberRECcutAndSew" width="90.5" height="49.5"/>
+        <image name="FMberRECcutAndSew1" width="90.5" height="49.5"/>
+        <image name="FMberRECcutAndSew1se" width="90.5" height="49.5"/>
+        <image name="FMberRECcutAndSew2" width="90.5" height="49.5"/>
+        <image name="FMberRECcutAndSew2se" width="90.5" height="49.5"/>
+        <image name="FMberRECcutAndSew3" width="90.5" height="49.5"/>
+        <image name="FMberRECcutAndSew3se" width="90.5" height="49.5"/>
+        <image name="FMberRECcutAndSewse" width="90.5" height="49.5"/>
+        <image name="FMberRECfiberArt" width="37" height="37.5"/>
+        <image name="FMberRECfreehandCutting" width="149" height="36"/>
+        <image name="FMberREChiskoel" width="140" height="140"/>
+        <image name="FMberREClayeredOutfits" width="56" height="36"/>
+        <image name="FMberRECpatternMixing" width="94.5" height="36"/>
+        <image name="FMberRECreworkedVintage" width="37" height="37.5"/>
+        <image name="FMberRECteachert" width="13" height="13"/>
+        <image name="FMberRECtextileCollage" width="37" height="37.5"/>
+        <image name="FMberRECtextilePrinting" width="211.5" height="36"/>
+        <image name="FMberRECttextileArt" width="100" height="100"/>
     </resources>
 </document>

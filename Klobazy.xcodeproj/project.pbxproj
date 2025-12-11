@@ -221,7 +221,6 @@
 				INFOPLIST_FILE = Klobazy/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Klosy;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Enable camera access to capture your unique garment transformations and share creative styling techniques with our community of fashion innovators.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "nable location access to discover local fabric stores, sustainable textile sources, and connect with nearby fashion modification enthusiasts in your community. Your location helps us suggest relevant materials and workshops while keeping your exact coordinates private.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access allows you to add voice commentary when documenting your textile redesign process for detailed craftsmanship sharing.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access your photo library to showcase before-and-after modifications, curate inspiration boards, and share your sustainable fashion journey.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Allow tracking to personalize your style discovery experience. This helps us show you relevant modification techniques and fabric patterns based on your creative interests, while maintaining your anonymity across our textile community network.";
@@ -262,7 +261,6 @@
 				INFOPLIST_FILE = Klobazy/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Klosy;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Enable camera access to capture your unique garment transformations and share creative styling techniques with our community of fashion innovators.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "nable location access to discover local fabric stores, sustainable textile sources, and connect with nearby fashion modification enthusiasts in your community. Your location helps us suggest relevant materials and workshops while keeping your exact coordinates private.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access allows you to add voice commentary when documenting your textile redesign process for detailed craftsmanship sharing.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access your photo library to showcase before-and-after modifications, curate inspiration boards, and share your sustainable fashion journey.";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Allow tracking to personalize your style discovery experience. This helps us show you relevant modification techniques and fabric patterns based on your creative interests, while maintaining your anonymity across our textile community network.";

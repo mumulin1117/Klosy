@@ -6,9 +6,10 @@ target 'Klobazy' do
   use_frameworks!
 
   # Pods for Klobazy
-pod "IQKeyboardManager"
-pod "SwiftyStoreKit"
+
+
 pod 'Adjust', '~> 5.1.1'
+pod "SwiftyStoreKit"
 pod 'FBSDKCoreKit'
-pod "SVProgressHUD"
+
 end

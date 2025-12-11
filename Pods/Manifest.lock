@@ -10,17 +10,11 @@ PODS:
     - FBAEMKit (= 18.0.0)
     - FBSDKCoreKit_Basics (= 18.0.0)
   - FBSDKCoreKit_Basics (18.0.0)
-  - IQKeyboardManager (6.5.19)
-  - SVProgressHUD (2.3.1):
-    - SVProgressHUD/Core (= 2.3.1)
-  - SVProgressHUD/Core (2.3.1)
   - SwiftyStoreKit (0.16.1)
 
 DEPENDENCIES:
   - Adjust (~> 5.1.1)
   - FBSDKCoreKit
-  - IQKeyboardManager
-  - SVProgressHUD
   - SwiftyStoreKit
 
 SPEC REPOS:
@@ -30,8 +24,6 @@ SPEC REPOS:
     - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
-    - IQKeyboardManager
-    - SVProgressHUD
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
@@ -40,10 +32,8 @@ SPEC CHECKSUMS:
   FBAEMKit: e34530df538b8eb8aeb53c35867715ba6c63ef0c
   FBSDKCoreKit: d3f479a69127acebb1c6aad91c1a33907bcf6c2f
   FBSDKCoreKit_Basics: 017b6dc2a1862024815a8229e75661e627ac1e29
-  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
-  SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: ed488df6415b30234c51a3fd5a4243b8aef1d7a7
+PODFILE CHECKSUM: 283c7761a4c8f3b03a5de5fb023a28a2d5fddd63
 
 COCOAPODS: 1.16.2
