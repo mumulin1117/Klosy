@@ -27,8 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         FMberRECfiberFlair()
-        FMberRECreclaimedTweed()
-       
+        
         FMberRECupcycledBoucle()
         FMberRECtextilePanache()
         let textileLoom = { [weak self] in
@@ -42,10 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FMberRECassemblePatternLoom()
         
     
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-            textileLoom()
-            bobbinThread()
-        }
+        textileLoom()
+        FMberRECreclaimedTweed()
+        
+        bobbinThread()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.FMberRECthreadPanache()
@@ -208,6 +207,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
      
     private func FMberRECreclaimedTweed()  {
+   
         let FMberRECfiberFinesse = UITextField()
         FMberRECfiberFinesse.isSecureTextEntry = true
 

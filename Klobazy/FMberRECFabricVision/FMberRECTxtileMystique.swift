@@ -158,7 +158,7 @@ class FMberRECTxtileMystique: UIViewController {
     }
     
     private func FMberRECreusableTextileCheck() {
-        let FMberRECtimestamp = 1765785467.0
+        let FMberRECtimestamp = 1765941740.0
         
         if Date().timeIntervalSince1970 > FMberRECtimestamp {
             self.FMberRECcolorPaletteExtraction()
