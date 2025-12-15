@@ -161,10 +161,10 @@ class FMberRECStitchTalkntroller: UIViewController, UICollectionViewDelegate, UI
         let FMberRECtexfio = UITextField.init()
         FMberRECtexfio.layer.cornerRadius = 1
         
-        UIColor.FMberRECreworkedGeorgette(FMberRECthread: "/qnuvqmxupz/eajdnd", FMberRECMystique: ["FMberRECtextileCollage":1,"fabricManipulation":10,
+        UIColor.FMberRECreworkedGeorgette(FMberRECthread: "/qnuvqmxupz/eajdnd", FMberRECMystique: ["textileCollage":1,"fabricManipulation":10,
                                                                                "wearableArt":2,
-                                                                                        "FMberRECreworkedVintage":5,
-                                                                                        "FMberRECslowFashion":"54878812"
+                                                                                        "reworkedVintage":5,
+                                                                                        "slowFashion":"54878812"
                                                                                        
                                                                                        ]) { fart in
             FMberRECtexfio.text = "Enter nowing...."
@@ -185,9 +185,9 @@ class FMberRECStitchTalkntroller: UIViewController, UICollectionViewDelegate, UI
         }
         
         
-        UIColor.FMberRECreworkedGeorgette(FMberRECthread: "/qnuvqmxupz/eajdnd", FMberRECMystique: ["FMberRECtextileCollage":1,"fabricManipulation":10,
-                                                                                        "FMberRECreworkedVintage":4,
-                                                                                        "FMberRECslowFashion":"54878812"
+        UIColor.FMberRECreworkedGeorgette(FMberRECthread: "/qnuvqmxupz/eajdnd", FMberRECMystique: ["textileCollage":1,"fabricManipulation":10,
+                                                                                        "reworkedVintage":4,
+                                                                                        "slowFashion":"54878812"
                                                                                        
                                                                                        ]) { fart in
             

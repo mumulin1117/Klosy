@@ -91,8 +91,8 @@ extension FMberRECMaBottomUHEgy:UICollectionViewDelegate,UICollectionViewDataSou
         if let boaer =  (FMberRECingWode["upcycledDenim"] as? Array<String>)?.first{
             FMberRECmaing.FMberRECweltPocket.FMberRECtextileFinesse(FMberREChand: boaer)
         }
-        FMberRECmaing.FMberRECDIYtextiles.text = FMberRECingWode["FMberRECfreehandCutting"] as? String
-        FMberRECmaing.FMberRECbespokeAlterations.text = FMberRECingWode["FMberREClayeredOutfits"] as? String
+        FMberRECmaing.FMberRECDIYtextiles.text = FMberRECingWode["freehandCutting"] as? String
+        FMberRECmaing.FMberRECbespokeAlterations.text = FMberRECingWode["layeredOutfits"] as? String
         
         FMberRECmaing.FMberRECtoloaibe.addTarget(self, action: #selector(FMberRECbubufreeem), for: .touchUpInside)
         return FMberRECmaing

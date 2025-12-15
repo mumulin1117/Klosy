@@ -19,7 +19,7 @@ class FMberRECFiberCraftntroller: UIViewController ,UICollectionViewDelegate,UIC
     }()
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         FMberRECmaterialPreview.layer.borderWidth = 2
-        let FMberRECdyumsis = FMberRECsticchtalk[indexPath.row]["FMberRECpatternMixing"] as? Int ?? 0
+        let FMberRECdyumsis = FMberRECsticchtalk[indexPath.row]["patternMixing"] as? Int ?? 0
         
         FMberRECmaterialPreview.layer.borderColor = UIColor.systemTeal.cgColor
       
@@ -44,10 +44,10 @@ class FMberRECFiberCraftntroller: UIViewController ,UICollectionViewDelegate,UIC
             FMberRECajio.FMberRECpaisleyMotif.FMberRECtextileFinesse(FMberREChand: boaer)
         }
         
-        let FMberRECcommmentCount = FMberRECingWode["FMberRECdeconstructedFashion"] as? Int ?? 0
+        let FMberRECcommmentCount = FMberRECingWode["deconstructedFashion"] as? Int ?? 0
         
         FMberRECajio.FMberRECanimalisticTexture.setTitle(" \(FMberRECcommmentCount)", for: .normal)
-        FMberRECajio.FMberRECzeroWastePattern.text = FMberRECingWode["FMberREClayeredOutfits"] as? String
+        FMberRECajio.FMberRECzeroWastePattern.text = FMberRECingWode["layeredOutfits"] as? String
         FMberRECajio.FMberREClowImpactDye.addTarget(self, action: #selector(FMberRECdeconstructedSatin), for: .touchUpInside)
         
         
@@ -108,9 +108,9 @@ class FMberRECFiberCraftntroller: UIViewController ,UICollectionViewDelegate,UIC
         FMberRECmaterialPreview.translatesAutoresizingMaskIntoConstraints = false
         FMberREChandmadeElegance.dataSource = self
         FMberRECshowFMberRECLoading()
-        UIColor.FMberRECreworkedGeorgette(FMberRECthread: "/qnuvqmxupz/eajdnd", FMberRECMystique: ["FMberRECreworkedVintage":1,"FMberRECtextileCollage":1,"fabricManipulation":10,
+        UIColor.FMberRECreworkedGeorgette(FMberRECthread: "/qnuvqmxupz/eajdnd", FMberRECMystique: ["reworkedVintage":1,"textileCollage":1,"fabricManipulation":10,
                                                                               
-                                                                               "FMberRECslowFashion":"54878812"
+                                                                               "slowFashion":"54878812"
                                                                                
                                                                               ]) { fart in
             self.FMberREChideFMberRECLoading()

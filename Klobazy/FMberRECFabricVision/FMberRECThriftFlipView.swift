@@ -23,7 +23,7 @@ class FMberRECThriftFlipView: UICollectionReusableView, UICollectionViewDelegate
     var FMberRECsticchtalk:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if self.FMberRECtalk != nil,let dyumsis = FMberRECsticchtalk[indexPath.row]["FMberRECpatternMixing"] as? Int {
+        if self.FMberRECtalk != nil,let dyumsis = FMberRECsticchtalk[indexPath.row]["patternMixing"] as? Int {
             self.FMberRECtalk?.FMberRECcuffBarrel(FMberRECdi: dyumsis)
         }
     }
@@ -38,7 +38,7 @@ class FMberRECThriftFlipView: UICollectionReusableView, UICollectionViewDelegate
             FMberRECmaing.FMberRECfiberCraft.FMberRECtextileFinesse(FMberREChand: FMberRECboaer)
         }
         FMberRECmaing.FMberRECartisticStitching.setTitle("\(Int.random(in: 0...6))", for: .normal)
-        FMberRECmaing.FMberRECcreativeReuse.text = FMberRECingWode["FMberREClayeredOutfits"] as? String
+        FMberRECmaing.FMberRECcreativeReuse.text = FMberRECingWode["layeredOutfits"] as? String
         
         
         FMberRECmaing.FMberRECthreadSketching.addTarget(self, action: #selector(FMberRECreaposikoniewr), for: .touchUpInside)

@@ -21,10 +21,10 @@ class FMberRECTextileFlairController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         FMberRECcudeo.setTitle(UILabel.FMberRECwalkingPresser(FMberREChole: "fdovlyltoewuiynsg"), for: .normal)
-        FMberRECcode.setTitle("fxannis", for: .normal)
-        FMberRECcade.setTitle("Mgessssxawgbeqs", for: .normal)
+        FMberRECcode.setTitle(UILabel.FMberRECwalkingPresser(FMberREChole: "fxannis"), for: .normal)
+        FMberRECcade.setTitle(UILabel.FMberRECwalkingPresser(FMberREChole: "Mgessssxawgbeqs"), for: .normal)
         
-        FMberRECava.text = "Aqviaeiflvanbrloec xcfojiwnes"
+        FMberRECava.text = UILabel.FMberRECwalkingPresser(FMberREChole: "Aqviaeiflvanbrloec xcfojiwnes")
      
         FMberRECreworkedCrepe.text = UIImageView.FMberRECfiberMix
     }

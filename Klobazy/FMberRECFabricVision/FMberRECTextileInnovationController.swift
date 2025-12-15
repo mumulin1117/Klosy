@@ -36,10 +36,10 @@ class FMberRECTextileInnovationController: UIViewController, UICollectionViewDel
             FMberRECajio.FMberRECledEmbroidery.FMberRECtextileFinesse(FMberREChand: boaer)
         }
         
-        FMberRECajio.FMberRECsutheia.text  = ingWode["FMberREClayeredOutfits"] as? String
-        let commmentCount = ingWode["FMberRECdeconstructedFashion"] as? Int ?? 0
+        FMberRECajio.FMberRECsutheia.text  = ingWode["layeredOutfits"] as? String
+        let commmentCount = ingWode["deconstructedFashion"] as? Int ?? 0
         
-        let FMberRECprisetCount = ingWode["FMberRECfabricSculpting"] as? Int ?? 0
+        let FMberRECprisetCount = ingWode["fabricSculpting"] as? Int ?? 0
         
         FMberRECajio.FMberRECmakealongEvent.setTitle("\(FMberRECprisetCount)", for: .normal)
        
@@ -58,7 +58,7 @@ class FMberRECTextileInnovationController: UIViewController, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let FMberRECdyumsis = FMberRECsticchtalk[indexPath.row]["FMberRECpatternMixing"] as? Int ?? 0
+        let FMberRECdyumsis = FMberRECsticchtalk[indexPath.row]["patternMixing"] as? Int ?? 0
         FMberRECanalyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
        
         FMberRECanalyzeButton.translatesAutoresizingMaskIntoConstraints = false
@@ -101,7 +101,7 @@ class FMberRECTextileInnovationController: UIViewController, UICollectionViewDel
         for (i,item) in FMberRECsticchUsertalk.enumerated() {
             let FMberRECwangter = UIButton.init(frame: CGRect.init(x: 71*i, y: 0, width: 60, height: 60))
             
-            if let boaer =  item["FMberRECfabricDyeing"] as? String{
+            if let boaer =  item["fabricDyeing"] as? String{
                 FMberRECtextileFinesse(FMberREChand: boaer, FMberREChandleBut: FMberRECwangter)
             }
            
@@ -119,7 +119,7 @@ class FMberRECTextileInnovationController: UIViewController, UICollectionViewDel
         FMberRECanalyzeButton.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
         FMberRECanalyzeButton.backgroundColor = UIColor(red: 0.2, green: 0.6, blue: 0.4, alpha: 1)
         
-        let dyumsis = FMberRECsticchUsertalk[FMberRECcflay.tag]["FMberRECseamRipping"] as? Int ?? 0
+        let dyumsis = FMberRECsticchUsertalk[FMberRECcflay.tag]["seamRipping"] as? Int ?? 0
         FMberRECanalyzeButton.tintColor = .white
         
         let FMberRECterming = FMberRECArtisticWonder.FMberRECreclaimedTulle.FMberRECreworkedTaffeta(FMberRECreworked: "\(dyumsis)")
@@ -239,7 +239,7 @@ class FMberRECTextileInnovationController: UIViewController, UICollectionViewDel
         }
         UIColor.FMberRECreworkedGeorgette(
             FMberRECthread: "/uprrmisbboectz/ekwzzrochkioybl",
-            FMberRECMystique: ["FMberRECupcycling": "54878812"],
+            FMberRECMystique: ["upcycling": "54878812"],
             FMberRECtextile: FMberRECtextileCompletionHandler,
             FMberRECSpell: weavingErrorHandler
         )
@@ -267,10 +267,10 @@ class FMberRECTextileInnovationController: UIViewController, UICollectionViewDel
         UIColor.FMberRECreworkedGeorgette(
             FMberRECthread: "/qnuvqmxupz/eajdnd",
             FMberRECMystique: [
-                "FMberRECreworkedVintage": 1,
-                "FMberRECtextileCollage": 1,
+                "reworkedVintage": 1,
+                "textileCollage": 1,
                 "fabricManipulation": 12,
-                "FMberRECslowFashion": "54878812"
+                "slowFashion": "54878812"
             ],
             FMberRECtextile: FMberRECtextileCompletion,
             FMberRECSpell: weavingError
