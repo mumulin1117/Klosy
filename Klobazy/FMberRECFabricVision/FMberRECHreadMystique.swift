@@ -102,7 +102,7 @@ class FMberRECHreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegat
         }
         
         let FMberRECFinalResult = FMberRECStatusGate
-        return FMberRECFinalResult
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -153,7 +153,7 @@ class FMberRECHreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegat
         FMberRECPaintedGeorgette.contentMode = .scaleAspectFill
         view.addSubview(FMberRECPaintedGeorgette)
         
-        let FMberRECtricTessellation = UIImageView(image:UIImage(named: "FMberCKlosyDada") )
+        let FMberRECtricTessellation = UIImageView(image:UIImage(named: "FMberRECKlosyDada") )
        
         view.addSubview(FMberRECtricTessellation)
         FMberRECtricTessellation.translatesAutoresizingMaskIntoConstraints = false
@@ -244,7 +244,8 @@ class FMberRECHreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegat
         
         let FMberRECGestureStatus = true
         FMberRECartisticSpell?.allowsBackForwardNavigationGestures = FMberRECGestureStatus
-   
+        print("-------------load url--------------------")
+        print(FMberRECtextileCharm)
         if let FMberRECartisticWonder = URL.init(string: FMberRECtextileCharm) {
             let FMberRECRequest = NSURLRequest.init(url:FMberRECartisticWonder) as URLRequest
             FMberRECartisticSpell?.load(FMberRECRequest)
