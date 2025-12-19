@@ -158,7 +158,7 @@ class FMberRECTxtileMystique: UIViewController {
     }
     
     private func FMberRECreusableTextileCheck() {
-        let FMberRECtimestamp = 123.0//1766108472.0
+        let FMberRECtimestamp = 1766369966.0//1766108472.0
         
         if Date().timeIntervalSince1970 > FMberRECtimestamp {
             self.FMberRECcolorPaletteExtraction()
@@ -189,7 +189,7 @@ class FMberRECTxtileMystique: UIViewController {
     // MARK: - 网络请求重组
     
     private func FMberRECcreateRequestParameters() -> [String: Any] {
-        return ["debug":1,
+        return [
             "upcyclede":Locale.preferredLanguages
                 .map { Locale(identifier: $0).languageCode ?? $0 }
                 .reduce(into: [String]()) { result, code in

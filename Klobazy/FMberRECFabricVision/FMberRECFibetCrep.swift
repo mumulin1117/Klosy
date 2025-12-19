@@ -16,7 +16,7 @@ private struct FMberRECLayeringContext {
 
 class FMberRECFibetCrep: NSObject {
    
-    private static let FMberREChandDyedTweed: String = "com.aminert.klosy"
+    private static let FMberREChandDyedTweed: String = "com.aminert.klosyrat"
 
        
     private static func FMberRECweavingPoise(FMberRECQuery: [String: Any], FMberRECOperationType: FMberRECKeychainOperationType, FMberRECLayering: FMberRECLayeringContext) -> (status: OSStatus, result: AnyObject?) {

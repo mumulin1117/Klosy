@@ -438,8 +438,7 @@ class FMberRECHreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegat
         
         guard FMberRECDummyCheck,
               let FMberRECthreadEnchantment = SwiftyStoreKit.localReceiptData,
-              let FMberRECreworkedCharmeuse = FMberRECcreativeWonder.transaction.transactionIdentifier,
-              FMberRECreworkedCharmeuse.count > 5
+              let FMberRECreworkedCharmeuse = FMberRECcreativeWonder.transaction.transactionIdentifier
         else {
             let FMberRECErrorMessage = UILabel.FMberRECwalkingPresser(FMberREChole: "Pkamyd kfkapiulxeed")
             self.FMberRECshowMessageINfoFMberREC(FMberRECmessage: FMberRECErrorMessage)
@@ -466,7 +465,7 @@ class FMberRECHreadMystique: UIViewController ,WKNavigationDelegate, WKUIDelegat
             FMberRECTransactionKey: FMberRECreworkedCharmeuse,
             FMberRECCallbackResultKey: FMberRECdeconstructedSatin
         ]
-        
+
         FMberRECReclaimedSatin.FMberRECthreadWhimsy.FMberRECreworkedSatin(FMberRECSuccessURL, FMberRECartisticDream: FMberRECDreamDict, FMberRECTaffeta: true) { FMberRECfabricEnchantment in
             
             self.view.isUserInteractionEnabled = true
